@@ -1,0 +1,59 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\rbull\Desktop\ECE111_Proj2_minimal
+vrle
+!s100 =6BNbI@_AQmO]53_1gDY_2
+I7Gz9OHnYgkT4mZ37^`VXe2
+Z1 VeWaNQ_kPoC_>=TN:V`c1d1
+Z2 dC:\Users\rbull\Desktop\ECE111_Proj2_minimal
+w1399614206
+Z3 8C:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_interface.v
+Z4 FC:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_interface.v
+L0 1
+Z5 OV;L;10.0d;49
+r1
+!s85 0
+31
+!s108 1399614213.519000
+!s107 C:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_interface.v|
+Z6 !s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_interface.v|
+!s101 -O0
+Z7 o-work work -O0
+vrle_testbench
+Z8 !s100 =7]:VDC7Yk8c>3KBXj79k1
+Z9 IKO:F_9BImH?SD;c0?GO9H3
+Z10 Vez3Z6:03M7de=?=oYZRXN3
+R2
+Z11 w1399603249
+Z12 8C:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_testbench.v
+Z13 FC:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_testbench.v
+L0 1
+R5
+r1
+31
+Z14 !s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_testbench.v|
+R7
+Z15 !s108 1399610942.317000
+Z16 !s107 C:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_testbench.v|
+!s85 0
+!s101 -O0
+vrle_testbench2
+Z17 !s100 [aAamAU8_?Rfo0XnTSe[B0
+Z18 Ig]i95Y70_P[aBTL2OciEK1
+Z19 V7HjMBTS:Fb1K7S0ecV;7O0
+R2
+Z20 w1399596848
+Z21 8C:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_testbench2.v
+Z22 FC:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_testbench2.v
+L0 1
+R5
+r1
+31
+Z23 !s90 -reportprogress|300|-work|work|C:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_testbench2.v|
+R7
+Z24 !s108 1399606520.131000
+Z25 !s107 C:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_testbench2.v|
+!s85 0
+!s101 -O0

@@ -1,0 +1,90 @@
+run
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# -----------
+# 
+# Plaintext	 
+# 
+# -----------
+# 
+# 0a0c0b0a
+# 
+# 0b0a0c0b
+# 
+# 0c0b0a0c
+# 
+# 0a0c0b0a
+# 
+# 0b0a0c0b
+# 
+# 0c0b0a0c
+# 
+# 0a0c0b0a
+# 
+# 0b0a0c0b
+# 
+# 0c0b0a0c
+# 
+# 000c0b0a
+# 
+# Latency          74!
+# 
+# -----------
+# 
+# Correct rle_size:         78
+# 
+# -----------
+# 
+# Compressed text 1
+# 
+# -----------
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 00000c01
+# 
+# Break in Module rle_testbench2 at C:/Users/rbull/Desktop/ECE111_Proj2_minimal/rle_testbench2.v line 123

@@ -1,0 +1,18 @@
+module pipe_write(input din1[31:0], input write_buf);
+
+reg buf[31:0];
+reg sz;
+
+always @ (posedge clk)
+begin
+	if (write_buf)
+		sz <= ~sz;
+
+end
+
+always @ (*)
+begin
+	case (sz)
+	1: buf = buf | (din1 << 16);
+	0: buf = buf | din1;
+end

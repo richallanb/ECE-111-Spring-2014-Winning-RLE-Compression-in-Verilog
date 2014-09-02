@@ -1,0 +1,20 @@
+Analysis & Synthesis Status : Successful - Thu May 08 22:43:30 2014
+Quartus II 32-bit Version : 12.0 Build 263 08/02/2012 SP 2 SJ Full Version
+Revision Name : rle_interface
+Top-level Entity Name : rle
+Family : Arria II GX
+Logic utilization : N/A
+    Combinational ALUTs : 200
+    Memory ALUTs : 0
+    Dedicated logic registers : 133
+Total registers : 133
+Total pins : 214
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 18-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0
+Total DLLs : 0

@@ -1,0 +1,923 @@
+Analysis & Synthesis report for rle
+Thu May 08 12:55:46 2014
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Physical Synthesis Netlist Optimizations
+ 12. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 13. Port Connectivity Checks: "block:blkv|pipe_read:b2v_inst18"
+ 14. Port Connectivity Checks: "block:blkv|comp_unit_x:b2v_inst12"
+ 15. Port Connectivity Checks: "block:blkv"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                   ;
++-----------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status       ; Successful - Thu May 08 12:55:46 2014      ;
+; Quartus II 64-Bit Version         ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                     ; rle                                        ;
+; Top-level Entity Name             ; rle                                        ;
+; Family                            ; Arria II GX                                ;
+; Logic utilization                 ; N/A                                        ;
+;     Combinational ALUTs           ; 994                                        ;
+;     Memory ALUTs                  ; 0                                          ;
+;     Dedicated logic registers     ; 165                                        ;
+; Total registers                   ; 165                                        ;
+; Total pins                        ; 214                                        ;
+; Total virtual pins                ; 0                                          ;
+; Total block memory bits           ; 0                                          ;
+; DSP block 18-bit elements         ; 0                                          ;
+; Total GXB Receiver Channel PCS    ; 0                                          ;
+; Total GXB Receiver Channel PMA    ; 0                                          ;
+; Total GXB Transmitter Channel PCS ; 0                                          ;
+; Total GXB Transmitter Channel PMA ; 0                                          ;
+; Total PLLs                        ; 0                                          ;
+; Total DLLs                        ; 0                                          ;
++-----------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; EP2AGX45DF29I5     ;                    ;
+; Top-level entity name                                                           ; rle                ; rle                ;
+; Family name                                                                     ; Arria II GX        ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; On                 ; Off                ;
+; Restructure Multiplexers                                                        ; Off                ; Auto               ;
+; Optimization Technique                                                          ; Speed              ; Balanced           ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; On                 ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                        ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                               ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+; pipe_write.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Richard/Google Drive/ECE111_Proj2 - Copy - Copy - Copy/pipe_write.v  ;         ;
+; pipe_read.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Richard/Google Drive/ECE111_Proj2 - Copy - Copy - Copy/pipe_read.v   ;         ;
+; block.v                          ; yes             ; User Verilog HDL File  ; C:/Users/Richard/Google Drive/ECE111_Proj2 - Copy - Copy - Copy/block.v       ;         ;
+; rle.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Richard/Google Drive/ECE111_Proj2 - Copy - Copy - Copy/rle.v         ;         ;
+; comp_unit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Richard/Google Drive/ECE111_Proj2 - Copy - Copy - Copy/comp_unit.v   ;         ;
+; comp_unit_x.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Richard/Google Drive/ECE111_Proj2 - Copy - Copy - Copy/comp_unit_x.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                            ;
++-----------------------------------------------+----------------------------------------+
+; Resource                                      ; Usage                                  ;
++-----------------------------------------------+----------------------------------------+
+; Estimated ALUTs Used                          ; 994                                    ;
+;     -- Combinational ALUTs                    ; 994                                    ;
+;     -- Memory ALUTs                           ; 0                                      ;
+;     -- LUT_REGs                               ; 0                                      ;
+; Dedicated logic registers                     ; 165                                    ;
+;                                               ;                                        ;
+; Estimated ALUTs Unavailable                   ; 326                                    ;
+;     -- Due to unpartnered combinational logic ; 326                                    ;
+;     -- Due to Memory ALUTs                    ; 0                                      ;
+;                                               ;                                        ;
+; Total combinational functions                 ; 994                                    ;
+; Combinational ALUT usage by number of inputs  ;                                        ;
+;     -- 7 input functions                      ; 64                                     ;
+;     -- 6 input functions                      ; 262                                    ;
+;     -- 5 input functions                      ; 173                                    ;
+;     -- 4 input functions                      ; 180                                    ;
+;     -- <=3 input functions                    ; 315                                    ;
+;                                               ;                                        ;
+; Combinational ALUTs by mode                   ;                                        ;
+;     -- normal mode                            ; 802                                    ;
+;     -- extended LUT mode                      ; 64                                     ;
+;     -- arithmetic mode                        ; 128                                    ;
+;     -- shared arithmetic mode                 ; 0                                      ;
+;                                               ;                                        ;
+; Estimated ALUT/register pairs used            ; 1320                                   ;
+;                                               ;                                        ;
+; Total registers                               ; 165                                    ;
+;     -- Dedicated logic registers              ; 165                                    ;
+;     -- I/O registers                          ; 0                                      ;
+;     -- LUT_REGs                               ; 0                                      ;
+;                                               ;                                        ;
+;                                               ;                                        ;
+; I/O pins                                      ; 214                                    ;
+; DSP block 18-bit elements                     ; 0                                      ;
+; Maximum fan-out node                          ; block:blkv|pipe_write:b2v_inst21|sz[5] ;
+; Maximum fan-out                               ; 227                                    ;
+; Total fan-out                                 ; 5404                                   ;
+; Average fan-out                               ; 3.41                                   ;
++-----------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                              ;
++--------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
++--------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------+--------------+
+; |rle                           ; 994 (19)          ; 165 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 214  ; 0            ; |rle                                   ; work         ;
+;    |block:blkv|                ; 975 (0)           ; 165 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |rle|block:blkv                        ; work         ;
+;       |comp_unit:b2v_inst|     ; 95 (95)           ; 17 (17)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |rle|block:blkv|comp_unit:b2v_inst     ; work         ;
+;       |comp_unit_x:b2v_inst10| ; 40 (40)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |rle|block:blkv|comp_unit_x:b2v_inst10 ; work         ;
+;       |comp_unit_x:b2v_inst11| ; 20 (20)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |rle|block:blkv|comp_unit_x:b2v_inst11 ; work         ;
+;       |comp_unit_x:b2v_inst12| ; 20 (20)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |rle|block:blkv|comp_unit_x:b2v_inst12 ; work         ;
+;       |pipe_read:b2v_inst18|   ; 89 (89)           ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |rle|block:blkv|pipe_read:b2v_inst18   ; work         ;
+;       |pipe_write:b2v_inst21|  ; 711 (711)         ; 116 (116)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |rle|block:blkv|pipe_write:b2v_inst21  ; work         ;
++--------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+----------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                   ;
++-----------------------------------------------------+----------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                    ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------------------------+------------------------+
+; block:blkv|comp_unit:b2v_inst|l_run_val_o[0]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; block:blkv|comp_unit:b2v_inst|l_run_val_o[1]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; block:blkv|comp_unit:b2v_inst|l_run_val_o[2]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; block:blkv|comp_unit:b2v_inst|l_run_val_o[3]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; block:blkv|comp_unit:b2v_inst|l_run_val_o[4]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; block:blkv|comp_unit:b2v_inst|l_run_val_o[5]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; block:blkv|comp_unit:b2v_inst|l_run_val_o[6]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; block:blkv|comp_unit:b2v_inst|l_run_val_o[7]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; block:blkv|comp_unit:b2v_inst|l_run_len_o[0]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; block:blkv|comp_unit:b2v_inst|l_run_len_o[1]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; block:blkv|comp_unit:b2v_inst|l_run_len_o[2]        ; block:blkv|comp_unit:b2v_inst|has_last ; yes                    ;
+; Number of user-specified and inferred latches = 11  ;                                        ;                        ;
++-----------------------------------------------------+----------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                          ;
++----------------------------------------------------+----------------------------------------+
+; Register name                                      ; Reason for Removal                     ;
++----------------------------------------------------+----------------------------------------+
+; block:blkv|pipe_write:b2v_inst21|total_sz[0]       ; Stuck at GND due to stuck port data_in ;
+; block:blkv|pipe_write:b2v_inst21|sz[0..3]          ; Stuck at GND due to stuck port data_in ;
+; block:blkv|pipe_read:b2v_inst18|curr_addr_off[0,1] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 7              ;                                        ;
++----------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 165   ;
+; Number of registers using Synchronous Clear  ; 162   ;
+; Number of registers using Synchronous Load   ; 25    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 158   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Physical Synthesis Netlist Optimizations                                                              ;
++----------------------------------------------------------------------+----------+---------------------+
+; Node                                                                 ; Action   ; Reason              ;
++----------------------------------------------------------------------+----------+---------------------+
+; block:blkv|comp_unit:b2v_inst|Add0~1                                 ; Modified ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|always1~0                              ; Modified ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|l_run_dout[0]~0                        ; Modified ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|last_run_len~0                         ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|last_run_len~1                         ; Modified ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|last_run_len~1_RESYN228_BDD229         ; Created  ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|last_run_len~1_RESYN230_BDD231         ; Created  ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|last_run_len~2                         ; Modified ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|last_run_len~3                         ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|last_run_len~4                         ; Modified ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|last_run_len~4_RESYN88_BDD89           ; Created  ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|last_run_val~0                         ; Modified ; Timing optimization ;
+; block:blkv|comp_unit:b2v_inst|last_run_val~0_RESYN14_BDD15           ; Created  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst10|always0~6                          ; Modified ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst10|zerofilled~0                       ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst11|l_run_val_o[0]~3                   ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst11|l_run_val_o[1]~4                   ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst11|l_run_val_o[2]~5                   ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst11|l_run_val_o[3]~6                   ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst11|l_run_val_o[4]~7                   ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst11|l_run_val_o[5]~0                   ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst11|l_run_val_o[6]~1                   ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst11|l_run_val_o[7]~2                   ; Deleted  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[0]~4                   ; Modified ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[0]~4_RESYN32_BDD33     ; Created  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[1]~5                   ; Modified ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[1]~5_RESYN80_BDD81     ; Created  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[2]~6                   ; Modified ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[2]~6_RESYN82_BDD83     ; Created  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[3]~7                   ; Modified ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[3]~7_RESYN84_BDD85     ; Created  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[4]~8                   ; Modified ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[4]~8_RESYN86_BDD87     ; Created  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[5]~1                   ; Modified ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[5]~1_RESYN74_BDD75     ; Created  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[6]~2                   ; Modified ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[6]~2_RESYN76_BDD77     ; Created  ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[7]~3                   ; Modified ; Timing optimization ;
+; block:blkv|comp_unit_x:b2v_inst12|l_run_val_o[7]~3_RESYN78_BDD79     ; Created  ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~0                          ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~8                          ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~11                         ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~14                         ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~17                         ; Modified ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~17_RESYN24_BDD25           ; Created  ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~17_RESYN26_BDD27           ; Created  ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~17_RESYN26_RESYN218_BDD219 ; Created  ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~17_RESYN26_RESYN220_BDD221 ; Created  ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~17_RESYN26_RESYN222_BDD223 ; Created  ; Timing optimization ;
+; block:blkv|pipe_read:b2v_inst18|LessThan0~17_RESYN28_BDD29           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Add1~2                              ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Add2~2                              ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux0~0                              ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux0~0_RESYN210_BDD211              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux0~0_RESYN212_BDD213              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux0~0_RESYN214_BDD215              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux0~2                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux0~4                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux0~5                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux1~0                              ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux1~0_RESYN204_BDD205              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux1~0_RESYN206_BDD207              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux1~0_RESYN208_BDD209              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux1~2                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux1~4                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux1~5                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux2~0                              ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux2~0_RESYN198_BDD199              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux2~0_RESYN200_BDD201              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux2~0_RESYN202_BDD203              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux2~2                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux2~4                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux2~5                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux3~0                              ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux3~0_RESYN192_BDD193              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux3~0_RESYN194_BDD195              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux3~0_RESYN196_BDD197              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux3~2                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux3~4                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux3~5                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux4~0                              ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux4~0_RESYN186_BDD187              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux4~0_RESYN188_BDD189              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux4~0_RESYN190_BDD191              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux4~2                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux4~4                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux4~5                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux5~0                              ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux5~0_RESYN180_BDD181              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux5~0_RESYN182_BDD183              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux5~0_RESYN184_BDD185              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux5~2                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux5~4                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux5~5                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux6~0                              ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux6~0_RESYN174_BDD175              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux6~0_RESYN176_BDD177              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux6~0_RESYN178_BDD179              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux6~2                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux6~4                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux6~5                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux7~0                              ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux7~0_RESYN168_BDD169              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux7~0_RESYN170_BDD171              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux7~0_RESYN172_BDD173              ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux7~2                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux7~4                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux7~5                              ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux16~2                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux16~4                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux16~5                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux16~6                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux17~2                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux17~4                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux17~5                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux17~6                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux18~2                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux18~4                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux18~5                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux18~6                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux19~2                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux19~4                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux19~5                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux19~6                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux20~2                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux20~4                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux20~5                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux20~6                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux21~2                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux21~4                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux21~5                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux21~6                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux22~2                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux22~4                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux22~5                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux22~6                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux23~2                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux23~4                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux23~5                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux23~6                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux31~2                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux31~3                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux31~4                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux31~5                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux62~0                             ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux62~0_RESYN224_BDD225             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux62~0_RESYN226_BDD227             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux62~1                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux81~0                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux81~1                             ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux81~2                             ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux81~2_RESYN8_BDD9                 ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|Mux114~0                            ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~10                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~11                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~12                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~13                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~14                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~15                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~16                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~17                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~18                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~19                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~20                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~21                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~22                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~23                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~24                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft0~25                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft1~11                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft1~13                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft1~15                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft1~17                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft1~19                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft1~21                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft1~23                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft1~25                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft2~8                        ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft2~9                        ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft2~10                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft2~11                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft2~12                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft2~13                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft2~14                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft2~15                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft4~3                        ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft4~4                        ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft4~5                        ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft4~6                        ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft4~7                        ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft4~8                        ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft4~9                        ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft4~10                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft8~11                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft9~11                       ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|ShiftLeft10~10                      ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|b                                   ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|b_RESYN0_BDD1                       ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|b_RESYN2_BDD3                       ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~1                            ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~2                            ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~4                            ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~9                            ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~14                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~16                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~18                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~20                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~22                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~24                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~26                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~28                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~32                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~32_RESYN12_BDD13             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~34                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~34_RESYN30_BDD31             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~50                           ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~51                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~51_RESYN4_BDD5               ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~58                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~61                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~61_RESYN16_BDD17             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~61_RESYN90_BDD91             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~61_RESYN92_BDD93             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~62                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~62_RESYN94_BDD95             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~62_RESYN96_BDD97             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~62_RESYN98_BDD99             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~62_RESYN100_BDD101           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~62_RESYN100_RESYN280_BDD281  ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~62_RESYN100_RESYN282_BDD283  ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~62_RESYN102_BDD103           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~63                           ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~64                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~64_RESYN6_BDD7               ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~71                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~71_RESYN42_BDD43             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~71_RESYN104_BDD105           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~71_RESYN106_BDD107           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~71_RESYN108_BDD109           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~71_RESYN110_BDD111           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~72                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~72_RESYN46_BDD47             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~72_RESYN112_BDD113           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~72_RESYN114_BDD115           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~72_RESYN116_BDD117           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~72_RESYN118_BDD119           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~73                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~73_RESYN50_BDD51             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~73_RESYN120_BDD121           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~73_RESYN122_BDD123           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~73_RESYN124_BDD125           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~73_RESYN126_BDD127           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~74                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~74_RESYN54_BDD55             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~74_RESYN128_BDD129           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~74_RESYN130_BDD131           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~74_RESYN132_BDD133           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~74_RESYN134_BDD135           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~75                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~75_RESYN58_BDD59             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~75_RESYN136_BDD137           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~75_RESYN138_BDD139           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~75_RESYN140_BDD141           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~75_RESYN142_BDD143           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~76                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~76_RESYN62_BDD63             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~76_RESYN144_BDD145           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~76_RESYN146_BDD147           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~76_RESYN148_BDD149           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~76_RESYN150_BDD151           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~77                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~77_RESYN66_BDD67             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~77_RESYN152_BDD153           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~77_RESYN154_BDD155           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~77_RESYN156_BDD157           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~77_RESYN158_BDD159           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~78                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~78_RESYN70_BDD71             ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~78_RESYN160_BDD161           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~78_RESYN162_BDD163           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~78_RESYN164_BDD165           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~78_RESYN166_BDD167           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~82                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~82_RESYN284_BDD285           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~82_RESYN286_BDD287           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~89                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~89_RESYN232_BDD233           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~89_RESYN288_BDD289           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~89_RESYN290_BDD291           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~89_RESYN292_BDD293           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~90                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~90_RESYN238_BDD239           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~90_RESYN294_BDD295           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~90_RESYN296_BDD297           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~90_RESYN298_BDD299           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~91                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~91_RESYN244_BDD245           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~91_RESYN300_BDD301           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~91_RESYN302_BDD303           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~91_RESYN304_BDD305           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~92                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~92_RESYN250_BDD251           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~92_RESYN306_BDD307           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~92_RESYN308_BDD309           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~92_RESYN310_BDD311           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~93                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~93_RESYN256_BDD257           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~93_RESYN312_BDD313           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~93_RESYN314_BDD315           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~93_RESYN316_BDD317           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~94                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~94_RESYN262_BDD263           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~94_RESYN318_BDD319           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~94_RESYN320_BDD321           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~94_RESYN322_BDD323           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~95                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~95_RESYN268_BDD269           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~95_RESYN324_BDD325           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~95_RESYN326_BDD327           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~95_RESYN328_BDD329           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~96                           ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~96_RESYN274_BDD275           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~96_RESYN330_BDD331           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~96_RESYN332_BDD333           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~96_RESYN334_BDD335           ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~97                           ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~98                           ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~99                           ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|butter~100                          ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|b~0                                 ; Deleted  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|i_done_read~2                       ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|sz~0                                ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|sz~0_RESYN10_BDD11                  ; Created  ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|sz~5                                ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|total_sz~0                          ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|total_sz~1                          ; Modified ; Timing optimization ;
+; block:blkv|pipe_write:b2v_inst21|total_sz~2                          ; Modified ; Timing optimization ;
++----------------------------------------------------------------------+----------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 30 bits   ; 60 ALUTs      ; 0 ALUTs              ; 60 ALUTs               ; Yes        ; |rle|block:blkv|pipe_read:b2v_inst18|curr_addr_off[29] ;
+; 4:1                ; 10 bits   ; 20 ALUTs      ; 0 ALUTs              ; 20 ALUTs               ; Yes        ; |rle|block:blkv|pipe_write:b2v_inst21|butter[55]       ;
+; 4:1                ; 15 bits   ; 30 ALUTs      ; 0 ALUTs              ; 30 ALUTs               ; Yes        ; |rle|block:blkv|pipe_write:b2v_inst21|butter[23]       ;
+; 5:1                ; 5 bits    ; 15 ALUTs      ; 10 ALUTs             ; 5 ALUTs                ; Yes        ; |rle|block:blkv|comp_unit:b2v_inst|last_run_len[4]     ;
+; 5:1                ; 30 bits   ; 90 ALUTs      ; 30 ALUTs             ; 60 ALUTs               ; Yes        ; |rle|block:blkv|pipe_write:b2v_inst21|total_sz[22]     ;
+; 7:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; Yes        ; |rle|block:blkv|comp_unit:b2v_inst|last_run_val[5]     ;
+; 8:1                ; 2 bits    ; 10 ALUTs      ; 8 ALUTs              ; 2 ALUTs                ; Yes        ; |rle|block:blkv|comp_unit:b2v_inst|last_run_len[1]     ;
+; 22:1               ; 2 bits    ; 28 ALUTs      ; 4 ALUTs              ; 24 ALUTs               ; Yes        ; |rle|block:blkv|pipe_write:b2v_inst21|butter[50]       ;
+; 22:1               ; 13 bits   ; 182 ALUTs     ; 26 ALUTs             ; 156 ALUTs              ; Yes        ; |rle|block:blkv|pipe_write:b2v_inst21|butter[9]        ;
+; 22:1               ; 10 bits   ; 140 ALUTs     ; 20 ALUTs             ; 120 ALUTs              ; Yes        ; |rle|block:blkv|pipe_write:b2v_inst21|butter[30]       ;
+; 22:1               ; 2 bits    ; 28 ALUTs      ; 8 ALUTs              ; 20 ALUTs               ; Yes        ; |rle|block:blkv|pipe_write:b2v_inst21|butter[65]       ;
+; 22:1               ; 10 bits   ; 140 ALUTs     ; 20 ALUTs             ; 120 ALUTs              ; Yes        ; |rle|block:blkv|pipe_write:b2v_inst21|butter[44]       ;
+; 22:1               ; 18 bits   ; 252 ALUTs     ; 54 ALUTs             ; 198 ALUTs              ; Yes        ; |rle|block:blkv|pipe_write:b2v_inst21|butter[74]       ;
+; 37:1               ; 2 bits    ; 48 ALUTs      ; 8 ALUTs              ; 40 ALUTs               ; Yes        ; |rle|block:blkv|pipe_write:b2v_inst21|sz[7]            ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft10      ;
+; 3:1                ; 67 bits   ; 134 ALUTs     ; 134 ALUTs            ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft10      ;
+; 3:1                ; 19 bits   ; 38 ALUTs      ; 38 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft8       ;
+; 4:1                ; 21 bits   ; 42 ALUTs      ; 42 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft4       ;
+; 4:1                ; 19 bits   ; 38 ALUTs      ; 38 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft2       ;
+; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft0       ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|comp_unit_x:b2v_inst11|ShiftRight0     ;
+; 4:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|comp_unit_x:b2v_inst10|ShiftRight0     ;
+; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|comp_unit_x:b2v_inst10|ShiftRight0     ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|comp_unit:b2v_inst|ShiftRight0         ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |rle|block:blkv|comp_unit:b2v_inst|ShiftRight0         ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 24 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|comp_unit:b2v_inst|ShiftRight0         ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 24 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|comp_unit:b2v_inst|ShiftRight0         ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft6       ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft10      ;
+; 4:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft6       ;
+; 4:1                ; 10 bits   ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft9       ;
+; 6:1                ; 10 bits   ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft9       ;
+; 6:1                ; 10 bits   ; 40 ALUTs      ; 30 ALUTs             ; 10 ALUTs               ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft9       ;
+; 6:1                ; 10 bits   ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|ShiftLeft8       ;
+; 16:1               ; 10 bits   ; 100 ALUTs     ; 80 ALUTs             ; 20 ALUTs               ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|Mux55            ;
+; 21:1               ; 9 bits    ; 126 ALUTs     ; 90 ALUTs             ; 36 ALUTs               ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|Mux7             ;
+; 22:1               ; 10 bits   ; 140 ALUTs     ; 110 ALUTs            ; 30 ALUTs               ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|Mux36            ;
+; 34:1               ; 8 bits    ; 176 ALUTs     ; 112 ALUTs            ; 64 ALUTs               ; No         ; |rle|block:blkv|pipe_write:b2v_inst21|Mux17            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "block:blkv|pipe_read:b2v_inst18"                                                                              ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                  ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; port_A_we ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "block:blkv|comp_unit_x:b2v_inst12"                                                                            ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                  ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; en_next   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; offset_o  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; dout_next ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "block:blkv"                                                                                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                  ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; CU2_haslast ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; CU3_haslast ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; CU4_haslast ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; CU1_lrunwo  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; CU1_haslast ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; firstread   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; CU1_curr    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; CU1_lrun    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; CU2_curr    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; CU3_curr    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; CU4_curr    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; dout_pipe   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:14     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Thu May 08 12:55:30 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rle -c rle
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file rle_testbench2.v
+    Info (12023): Found entity 1: rle_testbench2
+Info (12021): Found 1 design units, including 1 entities, in source file rle_testbench.v
+    Info (12023): Found entity 1: rle_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file pipe_write.v
+    Info (12023): Found entity 1: pipe_write
+Info (12021): Found 1 design units, including 1 entities, in source file pipe_read.v
+    Info (12023): Found entity 1: pipe_read
+Info (12021): Found 1 design units, including 1 entities, in source file block.v
+    Info (12023): Found entity 1: block
+Info (12021): Found 1 design units, including 1 entities, in source file rle.v
+    Info (12023): Found entity 1: rle
+Info (12021): Found 1 design units, including 1 entities, in source file comp_unit.v
+    Info (12023): Found entity 1: comp_unit
+Info (12021): Found 1 design units, including 1 entities, in source file comp_unit_x.v
+    Info (12023): Found entity 1: comp_unit_x
+Info (12021): Found 1 design units, including 1 entities, in source file tester.v
+    Info (12023): Found entity 1: tester
+Warning (10236): Verilog HDL Implicit Net warning at pipe_write.v(41): created implicit net for "a"
+Warning (10236): Verilog HDL Implicit Net warning at pipe_write.v(42): created implicit net for "b"
+Warning (10236): Verilog HDL Implicit Net warning at pipe_write.v(43): created implicit net for "c"
+Warning (10236): Verilog HDL Implicit Net warning at pipe_write.v(44): created implicit net for "d"
+Warning (10236): Verilog HDL Implicit Net warning at comp_unit.v(63): created implicit net for "i_has_last"
+Info (12127): Elaborating entity "rle" for the top level hierarchy
+Info (12128): Elaborating entity "block" for hierarchy "block:blkv"
+Info (12128): Elaborating entity "comp_unit" for hierarchy "block:blkv|comp_unit:b2v_inst"
+Warning (10036): Verilog HDL or VHDL warning at comp_unit.v(66): object "clk_lrunval" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at comp_unit.v(67): object "clk_lrunlen" assigned a value but never read
+Warning (10240): Verilog HDL Always Construct warning at comp_unit.v(24): inferring latch(es) for variable "l_run_len_o", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at comp_unit.v(24): inferring latch(es) for variable "l_run_val_o", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "l_run_val_o[0]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_val_o[1]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_val_o[2]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_val_o[3]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_val_o[4]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_val_o[5]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_val_o[6]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_val_o[7]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_len_o[0]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_len_o[1]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_len_o[2]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_len_o[3]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_len_o[4]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_len_o[5]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_len_o[6]" at comp_unit.v(53)
+Info (10041): Inferred latch for "l_run_len_o[7]" at comp_unit.v(53)
+Info (12128): Elaborating entity "comp_unit_x" for hierarchy "block:blkv|comp_unit_x:b2v_inst10"
+Info (12128): Elaborating entity "pipe_read" for hierarchy "block:blkv|pipe_read:b2v_inst18"
+Warning (10230): Verilog HDL assignment warning at pipe_read.v(55): truncated value with size 32 to match size of target (16)
+Warning (10755): Verilog HDL warning at pipe_read.v(56): assignments to started create a combinational loop
+Warning (10034): Output port "port_A_we" at pipe_read.v(16) has no driver
+Info (12128): Elaborating entity "pipe_write" for hierarchy "block:blkv|pipe_write:b2v_inst21"
+Warning (10036): Verilog HDL or VHDL warning at pipe_write.v(38): object "writeout" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(45): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(88): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(101): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(102): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(105): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(106): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(109): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(110): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(113): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(114): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(117): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(118): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(121): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(122): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(125): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(126): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(138): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(139): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(142): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(143): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(146): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(147): truncated value with size 32 to match size of target (8)
+Warning (10764): Verilog HDL warning at pipe_write.v(150): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at pipe_write.v(151): truncated value with size 32 to match size of target (8)
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (17026): Resynthesizing 0 WYSIWYG logic cells and I/Os using "speed" technology mapper which leaves 0 WYSIWYG logic cells and I/Os untouched
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_val_o[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[0]
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_val_o[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[1]
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_val_o[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[2]
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_val_o[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[3]
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_val_o[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[4]
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_val_o[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[5]
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_val_o[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[6]
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_val_o[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[7]
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_len_o[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[0]
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_len_o[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[0]
+Warning (13012): Latch block:blkv|comp_unit:b2v_inst|l_run_len_o[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal port_A_data_out[0]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "rle_size[0]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (128000): Starting physical synthesis optimizations for speed
+Warning (335093): TimeQuest Timing Analyzer is analyzing 11 combinational loops as latches.
+Info (332104): Reading SDC File: 'rle.out.sdc'
+Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
+Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info (332111): Found 2 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):    4.000          clk
+    Info (332111):    4.000       nreset
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 1109 ps
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 251 ps
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:04
+Info (144001): Generated suppressed messages file C:/Users/Richard/Google Drive/ECE111_Proj2 - Copy - Copy - Copy/output_files/rle.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 32 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "message_addr[16]"
+    Warning (15610): No output dependent on input pin "message_addr[17]"
+    Warning (15610): No output dependent on input pin "message_addr[18]"
+    Warning (15610): No output dependent on input pin "message_addr[19]"
+    Warning (15610): No output dependent on input pin "message_addr[20]"
+    Warning (15610): No output dependent on input pin "message_addr[21]"
+    Warning (15610): No output dependent on input pin "message_addr[22]"
+    Warning (15610): No output dependent on input pin "message_addr[23]"
+    Warning (15610): No output dependent on input pin "message_addr[24]"
+    Warning (15610): No output dependent on input pin "message_addr[25]"
+    Warning (15610): No output dependent on input pin "message_addr[26]"
+    Warning (15610): No output dependent on input pin "message_addr[27]"
+    Warning (15610): No output dependent on input pin "message_addr[28]"
+    Warning (15610): No output dependent on input pin "message_addr[29]"
+    Warning (15610): No output dependent on input pin "message_addr[30]"
+    Warning (15610): No output dependent on input pin "message_addr[31]"
+    Warning (15610): No output dependent on input pin "rle_addr[16]"
+    Warning (15610): No output dependent on input pin "rle_addr[17]"
+    Warning (15610): No output dependent on input pin "rle_addr[18]"
+    Warning (15610): No output dependent on input pin "rle_addr[19]"
+    Warning (15610): No output dependent on input pin "rle_addr[20]"
+    Warning (15610): No output dependent on input pin "rle_addr[21]"
+    Warning (15610): No output dependent on input pin "rle_addr[22]"
+    Warning (15610): No output dependent on input pin "rle_addr[23]"
+    Warning (15610): No output dependent on input pin "rle_addr[24]"
+    Warning (15610): No output dependent on input pin "rle_addr[25]"
+    Warning (15610): No output dependent on input pin "rle_addr[26]"
+    Warning (15610): No output dependent on input pin "rle_addr[27]"
+    Warning (15610): No output dependent on input pin "rle_addr[28]"
+    Warning (15610): No output dependent on input pin "rle_addr[29]"
+    Warning (15610): No output dependent on input pin "rle_addr[30]"
+    Warning (15610): No output dependent on input pin "rle_addr[31]"
+Info (21057): Implemented 1208 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 131 input pins
+    Info (21059): Implemented 83 output pins
+    Info (21061): Implemented 994 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 97 warnings
+    Info: Peak virtual memory: 636 megabytes
+    Info: Processing ended: Thu May 08 12:55:46 2014
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Richard/Google Drive/ECE111_Proj2 - Copy - Copy - Copy/output_files/rle.map.smsg.
+
+

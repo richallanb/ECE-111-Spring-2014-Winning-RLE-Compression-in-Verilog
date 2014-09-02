@@ -1,0 +1,1084 @@
+Slow 900mV -40C Model report for rle
+Thu May 08 12:58:42 2014
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Slow 900mV -40C Model Fmax Summary
+  3. Slow 900mV -40C Model Setup Summary
+  4. Slow 900mV -40C Model Hold Summary
+  5. Slow 900mV -40C Model Recovery Summary
+  6. Slow 900mV -40C Model Removal Summary
+  7. Slow 900mV -40C Model Minimum Pulse Width Summary
+  8. Setup Times
+  9. Hold Times
+ 10. Clock to Output Times
+ 11. Minimum Clock to Output Times
+ 12. Propagation Delay
+ 13. Minimum Propagation Delay
+ 14. Slow 900mV -40C Model Metastability Report
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------+
+; Slow 900mV -40C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 251.32 MHz ; 251.32 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------+
+; Slow 900mV -40C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -2.071 ; -24.501            ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 900mV -40C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.334 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 900mV -40C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 900mV -40C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 900mV -40C Model Minimum Pulse Width Summary ;
++--------+-------+----------------------------------+
+; Clock  ; Slack ; End Point TNS                    ;
++--------+-------+----------------------------------+
+; clk    ; 0.154 ; 0.000                            ;
+; nreset ; 0.154 ; 0.000                            ;
++--------+-------+----------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++----------------------+------------+--------+--------+------------+-----------------+
+; Data Port            ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------------+------------+--------+--------+------------+-----------------+
+; message_size[*]      ; clk        ; 5.875  ; 6.185  ; Rise       ; clk             ;
+;  message_size[0]     ; clk        ; 5.184  ; 5.362  ; Rise       ; clk             ;
+;  message_size[1]     ; clk        ; 5.156  ; 5.415  ; Rise       ; clk             ;
+;  message_size[2]     ; clk        ; 5.332  ; 5.473  ; Rise       ; clk             ;
+;  message_size[3]     ; clk        ; 5.136  ; 5.199  ; Rise       ; clk             ;
+;  message_size[4]     ; clk        ; 5.206  ; 5.276  ; Rise       ; clk             ;
+;  message_size[5]     ; clk        ; 5.159  ; 5.170  ; Rise       ; clk             ;
+;  message_size[6]     ; clk        ; 5.581  ; 5.540  ; Rise       ; clk             ;
+;  message_size[7]     ; clk        ; 5.660  ; 5.717  ; Rise       ; clk             ;
+;  message_size[8]     ; clk        ; 5.605  ; 5.707  ; Rise       ; clk             ;
+;  message_size[9]     ; clk        ; 5.674  ; 5.691  ; Rise       ; clk             ;
+;  message_size[10]    ; clk        ; 5.845  ; 5.797  ; Rise       ; clk             ;
+;  message_size[11]    ; clk        ; 5.673  ; 5.632  ; Rise       ; clk             ;
+;  message_size[12]    ; clk        ; 5.742  ; 5.865  ; Rise       ; clk             ;
+;  message_size[13]    ; clk        ; 5.539  ; 5.665  ; Rise       ; clk             ;
+;  message_size[14]    ; clk        ; 5.155  ; 5.342  ; Rise       ; clk             ;
+;  message_size[15]    ; clk        ; 5.328  ; 5.304  ; Rise       ; clk             ;
+;  message_size[16]    ; clk        ; 5.661  ; 5.784  ; Rise       ; clk             ;
+;  message_size[17]    ; clk        ; 5.557  ; 5.894  ; Rise       ; clk             ;
+;  message_size[18]    ; clk        ; 5.875  ; 6.185  ; Rise       ; clk             ;
+;  message_size[19]    ; clk        ; 5.485  ; 5.528  ; Rise       ; clk             ;
+;  message_size[20]    ; clk        ; 5.042  ; 5.083  ; Rise       ; clk             ;
+;  message_size[21]    ; clk        ; 4.414  ; 4.653  ; Rise       ; clk             ;
+;  message_size[22]    ; clk        ; 4.932  ; 5.173  ; Rise       ; clk             ;
+;  message_size[23]    ; clk        ; 5.459  ; 5.566  ; Rise       ; clk             ;
+;  message_size[24]    ; clk        ; 5.367  ; 5.373  ; Rise       ; clk             ;
+;  message_size[25]    ; clk        ; 5.041  ; 5.112  ; Rise       ; clk             ;
+;  message_size[26]    ; clk        ; 5.678  ; 5.688  ; Rise       ; clk             ;
+;  message_size[27]    ; clk        ; 4.952  ; 5.053  ; Rise       ; clk             ;
+;  message_size[28]    ; clk        ; 5.488  ; 5.502  ; Rise       ; clk             ;
+;  message_size[29]    ; clk        ; 4.721  ; 4.775  ; Rise       ; clk             ;
+;  message_size[30]    ; clk        ; 4.397  ; 4.495  ; Rise       ; clk             ;
+;  message_size[31]    ; clk        ; 3.825  ; 3.973  ; Rise       ; clk             ;
+; nreset               ; clk        ; 2.186  ; 2.340  ; Rise       ; clk             ;
+; port_A_data_out[*]   ; clk        ; 17.909 ; 18.030 ; Rise       ; clk             ;
+;  port_A_data_out[0]  ; clk        ; 16.538 ; 16.666 ; Rise       ; clk             ;
+;  port_A_data_out[1]  ; clk        ; 16.263 ; 16.444 ; Rise       ; clk             ;
+;  port_A_data_out[2]  ; clk        ; 16.914 ; 17.064 ; Rise       ; clk             ;
+;  port_A_data_out[3]  ; clk        ; 16.111 ; 16.247 ; Rise       ; clk             ;
+;  port_A_data_out[4]  ; clk        ; 15.788 ; 15.898 ; Rise       ; clk             ;
+;  port_A_data_out[5]  ; clk        ; 15.640 ; 15.781 ; Rise       ; clk             ;
+;  port_A_data_out[6]  ; clk        ; 15.661 ; 15.723 ; Rise       ; clk             ;
+;  port_A_data_out[7]  ; clk        ; 16.265 ; 16.358 ; Rise       ; clk             ;
+;  port_A_data_out[8]  ; clk        ; 17.615 ; 17.752 ; Rise       ; clk             ;
+;  port_A_data_out[9]  ; clk        ; 16.247 ; 16.379 ; Rise       ; clk             ;
+;  port_A_data_out[10] ; clk        ; 15.965 ; 16.129 ; Rise       ; clk             ;
+;  port_A_data_out[11] ; clk        ; 16.692 ; 16.793 ; Rise       ; clk             ;
+;  port_A_data_out[12] ; clk        ; 16.595 ; 16.672 ; Rise       ; clk             ;
+;  port_A_data_out[13] ; clk        ; 15.970 ; 15.994 ; Rise       ; clk             ;
+;  port_A_data_out[14] ; clk        ; 16.335 ; 16.354 ; Rise       ; clk             ;
+;  port_A_data_out[15] ; clk        ; 16.933 ; 16.785 ; Rise       ; clk             ;
+;  port_A_data_out[16] ; clk        ; 17.818 ; 17.941 ; Rise       ; clk             ;
+;  port_A_data_out[17] ; clk        ; 17.909 ; 18.030 ; Rise       ; clk             ;
+;  port_A_data_out[18] ; clk        ; 17.790 ; 17.857 ; Rise       ; clk             ;
+;  port_A_data_out[19] ; clk        ; 16.377 ; 16.390 ; Rise       ; clk             ;
+;  port_A_data_out[20] ; clk        ; 16.513 ; 16.611 ; Rise       ; clk             ;
+;  port_A_data_out[21] ; clk        ; 15.635 ; 15.781 ; Rise       ; clk             ;
+;  port_A_data_out[22] ; clk        ; 16.557 ; 16.610 ; Rise       ; clk             ;
+;  port_A_data_out[23] ; clk        ; 16.558 ; 16.545 ; Rise       ; clk             ;
+;  port_A_data_out[24] ; clk        ; 17.708 ; 17.797 ; Rise       ; clk             ;
+;  port_A_data_out[25] ; clk        ; 16.223 ; 16.393 ; Rise       ; clk             ;
+;  port_A_data_out[26] ; clk        ; 16.087 ; 16.281 ; Rise       ; clk             ;
+;  port_A_data_out[27] ; clk        ; 16.049 ; 16.171 ; Rise       ; clk             ;
+;  port_A_data_out[28] ; clk        ; 16.080 ; 16.120 ; Rise       ; clk             ;
+;  port_A_data_out[29] ; clk        ; 15.731 ; 15.792 ; Rise       ; clk             ;
+;  port_A_data_out[30] ; clk        ; 16.207 ; 16.173 ; Rise       ; clk             ;
+;  port_A_data_out[31] ; clk        ; 17.109 ; 16.966 ; Rise       ; clk             ;
+; start                ; clk        ; 5.109  ; 5.163  ; Rise       ; clk             ;
+; port_A_data_out[*]   ; nreset     ; 4.450  ; 4.539  ; Fall       ; nreset          ;
+;  port_A_data_out[0]  ; nreset     ; 3.085  ; 3.214  ; Fall       ; nreset          ;
+;  port_A_data_out[1]  ; nreset     ; 2.680  ; 2.859  ; Fall       ; nreset          ;
+;  port_A_data_out[2]  ; nreset     ; 3.469  ; 3.620  ; Fall       ; nreset          ;
+;  port_A_data_out[3]  ; nreset     ; 2.697  ; 2.833  ; Fall       ; nreset          ;
+;  port_A_data_out[4]  ; nreset     ; 2.374  ; 2.484  ; Fall       ; nreset          ;
+;  port_A_data_out[5]  ; nreset     ; 2.225  ; 2.351  ; Fall       ; nreset          ;
+;  port_A_data_out[6]  ; nreset     ; 2.383  ; 2.456  ; Fall       ; nreset          ;
+;  port_A_data_out[7]  ; nreset     ; 2.844  ; 2.924  ; Fall       ; nreset          ;
+;  port_A_data_out[8]  ; nreset     ; 4.201  ; 4.338  ; Fall       ; nreset          ;
+;  port_A_data_out[9]  ; nreset     ; 2.833  ; 2.965  ; Fall       ; nreset          ;
+;  port_A_data_out[10] ; nreset     ; 2.551  ; 2.715  ; Fall       ; nreset          ;
+;  port_A_data_out[11] ; nreset     ; 3.278  ; 3.379  ; Fall       ; nreset          ;
+;  port_A_data_out[12] ; nreset     ; 3.181  ; 3.258  ; Fall       ; nreset          ;
+;  port_A_data_out[13] ; nreset     ; 2.556  ; 2.580  ; Fall       ; nreset          ;
+;  port_A_data_out[14] ; nreset     ; 2.907  ; 2.940  ; Fall       ; nreset          ;
+;  port_A_data_out[15] ; nreset     ; 3.513  ; 3.363  ; Fall       ; nreset          ;
+;  port_A_data_out[16] ; nreset     ; 4.233  ; 4.356  ; Fall       ; nreset          ;
+;  port_A_data_out[17] ; nreset     ; 4.324  ; 4.445  ; Fall       ; nreset          ;
+;  port_A_data_out[18] ; nreset     ; 4.205  ; 4.272  ; Fall       ; nreset          ;
+;  port_A_data_out[19] ; nreset     ; 2.792  ; 2.805  ; Fall       ; nreset          ;
+;  port_A_data_out[20] ; nreset     ; 2.928  ; 3.021  ; Fall       ; nreset          ;
+;  port_A_data_out[21] ; nreset     ; 2.022  ; 2.196  ; Fall       ; nreset          ;
+;  port_A_data_out[22] ; nreset     ; 2.961  ; 3.025  ; Fall       ; nreset          ;
+;  port_A_data_out[23] ; nreset     ; 2.973  ; 2.946  ; Fall       ; nreset          ;
+;  port_A_data_out[24] ; nreset     ; 4.450  ; 4.539  ; Fall       ; nreset          ;
+;  port_A_data_out[25] ; nreset     ; 2.965  ; 3.135  ; Fall       ; nreset          ;
+;  port_A_data_out[26] ; nreset     ; 2.829  ; 3.023  ; Fall       ; nreset          ;
+;  port_A_data_out[27] ; nreset     ; 2.791  ; 2.903  ; Fall       ; nreset          ;
+;  port_A_data_out[28] ; nreset     ; 2.822  ; 2.862  ; Fall       ; nreset          ;
+;  port_A_data_out[29] ; nreset     ; 2.452  ; 2.534  ; Fall       ; nreset          ;
+;  port_A_data_out[30] ; nreset     ; 2.940  ; 2.904  ; Fall       ; nreset          ;
+;  port_A_data_out[31] ; nreset     ; 3.846  ; 3.683  ; Fall       ; nreset          ;
++----------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Hold Times                                                                         ;
++----------------------+------------+--------+--------+------------+-----------------+
+; Data Port            ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------------+------------+--------+--------+------------+-----------------+
+; message_size[*]      ; clk        ; -2.522 ; -2.471 ; Rise       ; clk             ;
+;  message_size[0]     ; clk        ; -4.162 ; -4.147 ; Rise       ; clk             ;
+;  message_size[1]     ; clk        ; -4.135 ; -4.195 ; Rise       ; clk             ;
+;  message_size[2]     ; clk        ; -4.298 ; -4.248 ; Rise       ; clk             ;
+;  message_size[3]     ; clk        ; -3.853 ; -3.887 ; Rise       ; clk             ;
+;  message_size[4]     ; clk        ; -3.929 ; -3.959 ; Rise       ; clk             ;
+;  message_size[5]     ; clk        ; -3.857 ; -3.794 ; Rise       ; clk             ;
+;  message_size[6]     ; clk        ; -4.233 ; -4.136 ; Rise       ; clk             ;
+;  message_size[7]     ; clk        ; -4.419 ; -4.314 ; Rise       ; clk             ;
+;  message_size[8]     ; clk        ; -4.481 ; -4.394 ; Rise       ; clk             ;
+;  message_size[9]     ; clk        ; -4.399 ; -4.273 ; Rise       ; clk             ;
+;  message_size[10]    ; clk        ; -4.350 ; -4.254 ; Rise       ; clk             ;
+;  message_size[11]    ; clk        ; -4.197 ; -4.121 ; Rise       ; clk             ;
+;  message_size[12]    ; clk        ; -4.356 ; -4.311 ; Rise       ; clk             ;
+;  message_size[13]    ; clk        ; -4.162 ; -4.124 ; Rise       ; clk             ;
+;  message_size[14]    ; clk        ; -3.525 ; -3.511 ; Rise       ; clk             ;
+;  message_size[15]    ; clk        ; -3.834 ; -3.729 ; Rise       ; clk             ;
+;  message_size[16]    ; clk        ; -4.247 ; -4.163 ; Rise       ; clk             ;
+;  message_size[17]    ; clk        ; -4.249 ; -4.311 ; Rise       ; clk             ;
+;  message_size[18]    ; clk        ; -4.544 ; -4.580 ; Rise       ; clk             ;
+;  message_size[19]    ; clk        ; -3.711 ; -3.757 ; Rise       ; clk             ;
+;  message_size[20]    ; clk        ; -3.589 ; -3.638 ; Rise       ; clk             ;
+;  message_size[21]    ; clk        ; -3.211 ; -3.299 ; Rise       ; clk             ;
+;  message_size[22]    ; clk        ; -3.680 ; -3.750 ; Rise       ; clk             ;
+;  message_size[23]    ; clk        ; -4.172 ; -4.135 ; Rise       ; clk             ;
+;  message_size[24]    ; clk        ; -3.895 ; -3.834 ; Rise       ; clk             ;
+;  message_size[25]    ; clk        ; -3.505 ; -3.531 ; Rise       ; clk             ;
+;  message_size[26]    ; clk        ; -4.300 ; -4.310 ; Rise       ; clk             ;
+;  message_size[27]    ; clk        ; -3.570 ; -3.632 ; Rise       ; clk             ;
+;  message_size[28]    ; clk        ; -4.119 ; -4.134 ; Rise       ; clk             ;
+;  message_size[29]    ; clk        ; -3.269 ; -3.239 ; Rise       ; clk             ;
+;  message_size[30]    ; clk        ; -2.870 ; -2.880 ; Rise       ; clk             ;
+;  message_size[31]    ; clk        ; -2.522 ; -2.471 ; Rise       ; clk             ;
+; nreset               ; clk        ; -0.453 ; -0.528 ; Rise       ; clk             ;
+; port_A_data_out[*]   ; clk        ; -2.267 ; -2.333 ; Rise       ; clk             ;
+;  port_A_data_out[0]  ; clk        ; -2.534 ; -2.717 ; Rise       ; clk             ;
+;  port_A_data_out[1]  ; clk        ; -2.504 ; -2.622 ; Rise       ; clk             ;
+;  port_A_data_out[2]  ; clk        ; -2.704 ; -2.836 ; Rise       ; clk             ;
+;  port_A_data_out[3]  ; clk        ; -2.344 ; -2.399 ; Rise       ; clk             ;
+;  port_A_data_out[4]  ; clk        ; -2.303 ; -2.390 ; Rise       ; clk             ;
+;  port_A_data_out[5]  ; clk        ; -2.300 ; -2.365 ; Rise       ; clk             ;
+;  port_A_data_out[6]  ; clk        ; -2.275 ; -2.333 ; Rise       ; clk             ;
+;  port_A_data_out[7]  ; clk        ; -2.267 ; -2.392 ; Rise       ; clk             ;
+;  port_A_data_out[8]  ; clk        ; -5.297 ; -5.341 ; Rise       ; clk             ;
+;  port_A_data_out[9]  ; clk        ; -3.940 ; -4.037 ; Rise       ; clk             ;
+;  port_A_data_out[10] ; clk        ; -3.771 ; -3.924 ; Rise       ; clk             ;
+;  port_A_data_out[11] ; clk        ; -4.255 ; -4.296 ; Rise       ; clk             ;
+;  port_A_data_out[12] ; clk        ; -4.242 ; -4.271 ; Rise       ; clk             ;
+;  port_A_data_out[13] ; clk        ; -3.835 ; -3.857 ; Rise       ; clk             ;
+;  port_A_data_out[14] ; clk        ; -4.185 ; -4.183 ; Rise       ; clk             ;
+;  port_A_data_out[15] ; clk        ; -4.749 ; -4.559 ; Rise       ; clk             ;
+;  port_A_data_out[16] ; clk        ; -4.743 ; -4.754 ; Rise       ; clk             ;
+;  port_A_data_out[17] ; clk        ; -5.043 ; -5.086 ; Rise       ; clk             ;
+;  port_A_data_out[18] ; clk        ; -4.977 ; -5.003 ; Rise       ; clk             ;
+;  port_A_data_out[19] ; clk        ; -4.186 ; -4.113 ; Rise       ; clk             ;
+;  port_A_data_out[20] ; clk        ; -3.314 ; -3.398 ; Rise       ; clk             ;
+;  port_A_data_out[21] ; clk        ; -3.669 ; -3.764 ; Rise       ; clk             ;
+;  port_A_data_out[22] ; clk        ; -4.446 ; -4.406 ; Rise       ; clk             ;
+;  port_A_data_out[23] ; clk        ; -4.327 ; -4.232 ; Rise       ; clk             ;
+;  port_A_data_out[24] ; clk        ; -4.590 ; -4.601 ; Rise       ; clk             ;
+;  port_A_data_out[25] ; clk        ; -3.693 ; -3.748 ; Rise       ; clk             ;
+;  port_A_data_out[26] ; clk        ; -3.568 ; -3.639 ; Rise       ; clk             ;
+;  port_A_data_out[27] ; clk        ; -3.850 ; -3.909 ; Rise       ; clk             ;
+;  port_A_data_out[28] ; clk        ; -3.718 ; -3.736 ; Rise       ; clk             ;
+;  port_A_data_out[29] ; clk        ; -3.137 ; -3.150 ; Rise       ; clk             ;
+;  port_A_data_out[30] ; clk        ; -4.401 ; -4.308 ; Rise       ; clk             ;
+;  port_A_data_out[31] ; clk        ; -4.992 ; -4.772 ; Rise       ; clk             ;
+; start                ; clk        ; -2.739 ; -2.901 ; Rise       ; clk             ;
+; port_A_data_out[*]   ; nreset     ; 1.226  ; 1.117  ; Fall       ; nreset          ;
+;  port_A_data_out[0]  ; nreset     ; 0.911  ; 0.761  ; Fall       ; nreset          ;
+;  port_A_data_out[1]  ; nreset     ; 1.208  ; 1.117  ; Fall       ; nreset          ;
+;  port_A_data_out[2]  ; nreset     ; 0.990  ; 0.848  ; Fall       ; nreset          ;
+;  port_A_data_out[3]  ; nreset     ; 1.011  ; 0.939  ; Fall       ; nreset          ;
+;  port_A_data_out[4]  ; nreset     ; 1.226  ; 1.111  ; Fall       ; nreset          ;
+;  port_A_data_out[5]  ; nreset     ; 1.159  ; 1.009  ; Fall       ; nreset          ;
+;  port_A_data_out[6]  ; nreset     ; 0.903  ; 0.882  ; Fall       ; nreset          ;
+;  port_A_data_out[7]  ; nreset     ; 0.820  ; 0.702  ; Fall       ; nreset          ;
+;  port_A_data_out[8]  ; nreset     ; -1.752 ; -1.847 ; Fall       ; nreset          ;
+;  port_A_data_out[9]  ; nreset     ; -0.467 ; -0.609 ; Fall       ; nreset          ;
+;  port_A_data_out[10] ; nreset     ; -0.207 ; -0.360 ; Fall       ; nreset          ;
+;  port_A_data_out[11] ; nreset     ; -0.904 ; -1.017 ; Fall       ; nreset          ;
+;  port_A_data_out[12] ; nreset     ; -0.807 ; -0.908 ; Fall       ; nreset          ;
+;  port_A_data_out[13] ; nreset     ; -0.252 ; -0.273 ; Fall       ; nreset          ;
+;  port_A_data_out[14] ; nreset     ; -0.577 ; -0.607 ; Fall       ; nreset          ;
+;  port_A_data_out[15] ; nreset     ; -1.149 ; -1.007 ; Fall       ; nreset          ;
+;  port_A_data_out[16] ; nreset     ; -1.938 ; -2.019 ; Fall       ; nreset          ;
+;  port_A_data_out[17] ; nreset     ; -1.989 ; -2.081 ; Fall       ; nreset          ;
+;  port_A_data_out[18] ; nreset     ; -1.898 ; -1.961 ; Fall       ; nreset          ;
+;  port_A_data_out[19] ; nreset     ; -0.620 ; -0.623 ; Fall       ; nreset          ;
+;  port_A_data_out[20] ; nreset     ; -0.753 ; -0.852 ; Fall       ; nreset          ;
+;  port_A_data_out[21] ; nreset     ; 0.056  ; -0.061 ; Fall       ; nreset          ;
+;  port_A_data_out[22] ; nreset     ; -0.806 ; -0.821 ; Fall       ; nreset          ;
+;  port_A_data_out[23] ; nreset     ; -0.794 ; -0.784 ; Fall       ; nreset          ;
+;  port_A_data_out[24] ; nreset     ; -1.799 ; -1.898 ; Fall       ; nreset          ;
+;  port_A_data_out[25] ; nreset     ; -0.434 ; -0.571 ; Fall       ; nreset          ;
+;  port_A_data_out[26] ; nreset     ; -0.334 ; -0.481 ; Fall       ; nreset          ;
+;  port_A_data_out[27] ; nreset     ; -0.330 ; -0.432 ; Fall       ; nreset          ;
+;  port_A_data_out[28] ; nreset     ; -0.357 ; -0.394 ; Fall       ; nreset          ;
+;  port_A_data_out[29] ; nreset     ; -0.009 ; -0.085 ; Fall       ; nreset          ;
+;  port_A_data_out[30] ; nreset     ; -0.472 ; -0.437 ; Fall       ; nreset          ;
+;  port_A_data_out[31] ; nreset     ; -1.312 ; -1.159 ; Fall       ; nreset          ;
++----------------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Clock to Output Times                                                             ;
++---------------------+------------+--------+--------+------------+-----------------+
+; Data Port           ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------+------------+--------+--------+------------+-----------------+
+; done                ; clk        ; 7.828  ; 7.830  ; Rise       ; clk             ;
+; port_A_addr[*]      ; clk        ; 9.809  ; 9.735  ; Rise       ; clk             ;
+;  port_A_addr[0]     ; clk        ; 9.141  ; 9.092  ; Rise       ; clk             ;
+;  port_A_addr[1]     ; clk        ; 9.122  ; 9.092  ; Rise       ; clk             ;
+;  port_A_addr[2]     ; clk        ; 9.244  ; 9.215  ; Rise       ; clk             ;
+;  port_A_addr[3]     ; clk        ; 9.014  ; 9.093  ; Rise       ; clk             ;
+;  port_A_addr[4]     ; clk        ; 9.809  ; 9.735  ; Rise       ; clk             ;
+;  port_A_addr[5]     ; clk        ; 8.704  ; 8.717  ; Rise       ; clk             ;
+;  port_A_addr[6]     ; clk        ; 9.326  ; 9.165  ; Rise       ; clk             ;
+;  port_A_addr[7]     ; clk        ; 9.070  ; 9.163  ; Rise       ; clk             ;
+;  port_A_addr[8]     ; clk        ; 9.130  ; 9.085  ; Rise       ; clk             ;
+;  port_A_addr[9]     ; clk        ; 9.233  ; 9.136  ; Rise       ; clk             ;
+;  port_A_addr[10]    ; clk        ; 9.354  ; 9.212  ; Rise       ; clk             ;
+;  port_A_addr[11]    ; clk        ; 9.595  ; 9.469  ; Rise       ; clk             ;
+;  port_A_addr[12]    ; clk        ; 9.606  ; 9.503  ; Rise       ; clk             ;
+;  port_A_addr[13]    ; clk        ; 9.435  ; 9.331  ; Rise       ; clk             ;
+;  port_A_addr[14]    ; clk        ; 8.497  ; 8.496  ; Rise       ; clk             ;
+;  port_A_addr[15]    ; clk        ; 9.473  ; 9.381  ; Rise       ; clk             ;
+; port_A_clk          ; clk        ; 3.664  ; 3.593  ; Rise       ; clk             ;
+; port_A_data_in[*]   ; clk        ; 7.417  ; 7.375  ; Rise       ; clk             ;
+;  port_A_data_in[0]  ; clk        ; 5.999  ; 5.936  ; Rise       ; clk             ;
+;  port_A_data_in[1]  ; clk        ; 6.593  ; 6.498  ; Rise       ; clk             ;
+;  port_A_data_in[2]  ; clk        ; 7.417  ; 7.337  ; Rise       ; clk             ;
+;  port_A_data_in[3]  ; clk        ; 6.035  ; 6.088  ; Rise       ; clk             ;
+;  port_A_data_in[4]  ; clk        ; 5.943  ; 5.873  ; Rise       ; clk             ;
+;  port_A_data_in[5]  ; clk        ; 6.199  ; 6.248  ; Rise       ; clk             ;
+;  port_A_data_in[6]  ; clk        ; 5.717  ; 5.628  ; Rise       ; clk             ;
+;  port_A_data_in[7]  ; clk        ; 6.038  ; 6.097  ; Rise       ; clk             ;
+;  port_A_data_in[8]  ; clk        ; 6.786  ; 6.651  ; Rise       ; clk             ;
+;  port_A_data_in[9]  ; clk        ; 6.211  ; 6.032  ; Rise       ; clk             ;
+;  port_A_data_in[10] ; clk        ; 6.542  ; 6.565  ; Rise       ; clk             ;
+;  port_A_data_in[11] ; clk        ; 7.140  ; 7.056  ; Rise       ; clk             ;
+;  port_A_data_in[12] ; clk        ; 6.445  ; 6.466  ; Rise       ; clk             ;
+;  port_A_data_in[13] ; clk        ; 6.207  ; 6.265  ; Rise       ; clk             ;
+;  port_A_data_in[14] ; clk        ; 7.226  ; 7.070  ; Rise       ; clk             ;
+;  port_A_data_in[15] ; clk        ; 5.816  ; 5.790  ; Rise       ; clk             ;
+;  port_A_data_in[16] ; clk        ; 7.306  ; 7.375  ; Rise       ; clk             ;
+;  port_A_data_in[17] ; clk        ; 7.243  ; 7.112  ; Rise       ; clk             ;
+;  port_A_data_in[18] ; clk        ; 6.573  ; 6.512  ; Rise       ; clk             ;
+;  port_A_data_in[19] ; clk        ; 6.050  ; 5.941  ; Rise       ; clk             ;
+;  port_A_data_in[20] ; clk        ; 5.708  ; 5.624  ; Rise       ; clk             ;
+;  port_A_data_in[21] ; clk        ; 6.048  ; 5.956  ; Rise       ; clk             ;
+;  port_A_data_in[22] ; clk        ; 5.982  ; 5.979  ; Rise       ; clk             ;
+;  port_A_data_in[23] ; clk        ; 5.912  ; 5.821  ; Rise       ; clk             ;
+;  port_A_data_in[24] ; clk        ; 6.219  ; 6.267  ; Rise       ; clk             ;
+;  port_A_data_in[25] ; clk        ; 6.825  ; 6.769  ; Rise       ; clk             ;
+;  port_A_data_in[26] ; clk        ; 6.112  ; 5.996  ; Rise       ; clk             ;
+;  port_A_data_in[27] ; clk        ; 6.303  ; 6.334  ; Rise       ; clk             ;
+;  port_A_data_in[28] ; clk        ; 6.464  ; 6.470  ; Rise       ; clk             ;
+;  port_A_data_in[29] ; clk        ; 7.065  ; 7.065  ; Rise       ; clk             ;
+;  port_A_data_in[30] ; clk        ; 5.822  ; 5.742  ; Rise       ; clk             ;
+;  port_A_data_in[31] ; clk        ; 6.171  ; 6.141  ; Rise       ; clk             ;
+; port_A_we           ; clk        ; 6.904  ; 6.883  ; Rise       ; clk             ;
+; rle_size[*]         ; clk        ; 7.072  ; 7.121  ; Rise       ; clk             ;
+;  rle_size[1]        ; clk        ; 5.090  ; 5.080  ; Rise       ; clk             ;
+;  rle_size[2]        ; clk        ; 5.745  ; 5.751  ; Rise       ; clk             ;
+;  rle_size[3]        ; clk        ; 6.056  ; 6.126  ; Rise       ; clk             ;
+;  rle_size[4]        ; clk        ; 5.430  ; 5.441  ; Rise       ; clk             ;
+;  rle_size[5]        ; clk        ; 5.623  ; 5.630  ; Rise       ; clk             ;
+;  rle_size[6]        ; clk        ; 5.554  ; 5.564  ; Rise       ; clk             ;
+;  rle_size[7]        ; clk        ; 5.810  ; 5.758  ; Rise       ; clk             ;
+;  rle_size[8]        ; clk        ; 5.658  ; 5.659  ; Rise       ; clk             ;
+;  rle_size[9]        ; clk        ; 5.562  ; 5.657  ; Rise       ; clk             ;
+;  rle_size[10]       ; clk        ; 5.617  ; 5.557  ; Rise       ; clk             ;
+;  rle_size[11]       ; clk        ; 5.834  ; 5.759  ; Rise       ; clk             ;
+;  rle_size[12]       ; clk        ; 5.678  ; 5.757  ; Rise       ; clk             ;
+;  rle_size[13]       ; clk        ; 5.824  ; 5.766  ; Rise       ; clk             ;
+;  rle_size[14]       ; clk        ; 5.429  ; 5.389  ; Rise       ; clk             ;
+;  rle_size[15]       ; clk        ; 5.983  ; 6.059  ; Rise       ; clk             ;
+;  rle_size[16]       ; clk        ; 5.704  ; 5.694  ; Rise       ; clk             ;
+;  rle_size[17]       ; clk        ; 6.119  ; 6.056  ; Rise       ; clk             ;
+;  rle_size[18]       ; clk        ; 6.153  ; 6.084  ; Rise       ; clk             ;
+;  rle_size[19]       ; clk        ; 6.533  ; 6.447  ; Rise       ; clk             ;
+;  rle_size[20]       ; clk        ; 6.006  ; 5.964  ; Rise       ; clk             ;
+;  rle_size[21]       ; clk        ; 5.973  ; 5.895  ; Rise       ; clk             ;
+;  rle_size[22]       ; clk        ; 5.478  ; 5.433  ; Rise       ; clk             ;
+;  rle_size[23]       ; clk        ; 5.509  ; 5.486  ; Rise       ; clk             ;
+;  rle_size[24]       ; clk        ; 5.857  ; 5.782  ; Rise       ; clk             ;
+;  rle_size[25]       ; clk        ; 7.072  ; 7.121  ; Rise       ; clk             ;
+;  rle_size[26]       ; clk        ; 5.558  ; 5.649  ; Rise       ; clk             ;
+;  rle_size[27]       ; clk        ; 6.505  ; 6.446  ; Rise       ; clk             ;
+;  rle_size[28]       ; clk        ; 5.865  ; 5.790  ; Rise       ; clk             ;
+;  rle_size[29]       ; clk        ; 5.550  ; 5.519  ; Rise       ; clk             ;
+;  rle_size[30]       ; clk        ; 5.340  ; 5.323  ; Rise       ; clk             ;
+;  rle_size[31]       ; clk        ; 6.805  ; 6.681  ; Rise       ; clk             ;
+; port_A_clk          ; clk        ; 3.664  ; 3.593  ; Fall       ; clk             ;
+; port_A_addr[*]      ; nreset     ; 10.364 ; 10.332 ; Rise       ; nreset          ;
+;  port_A_addr[0]     ; nreset     ; 9.713  ; 9.658  ; Rise       ; nreset          ;
+;  port_A_addr[1]     ; nreset     ; 9.693  ; 9.657  ; Rise       ; nreset          ;
+;  port_A_addr[2]     ; nreset     ; 9.683  ; 9.645  ; Rise       ; nreset          ;
+;  port_A_addr[3]     ; nreset     ; 9.825  ; 9.935  ; Rise       ; nreset          ;
+;  port_A_addr[4]     ; nreset     ; 10.364 ; 10.332 ; Rise       ; nreset          ;
+;  port_A_addr[5]     ; nreset     ; 9.279  ; 9.325  ; Rise       ; nreset          ;
+;  port_A_addr[6]     ; nreset     ; 9.935  ; 9.933  ; Rise       ; nreset          ;
+;  port_A_addr[7]     ; nreset     ; 9.617  ; 9.752  ; Rise       ; nreset          ;
+;  port_A_addr[8]     ; nreset     ; 9.696  ; 9.684  ; Rise       ; nreset          ;
+;  port_A_addr[9]     ; nreset     ; 9.781  ; 9.743  ; Rise       ; nreset          ;
+;  port_A_addr[10]    ; nreset     ; 9.606  ; 9.575  ; Rise       ; nreset          ;
+;  port_A_addr[11]    ; nreset     ; 7.686  ; 7.626  ; Rise       ; nreset          ;
+;  port_A_addr[12]    ; nreset     ; 7.430  ; 7.391  ; Rise       ; nreset          ;
+;  port_A_addr[13]    ; nreset     ; 7.650  ; 7.598  ; Rise       ; nreset          ;
+;  port_A_addr[14]    ; nreset     ; 6.795  ; 6.866  ; Rise       ; nreset          ;
+;  port_A_addr[15]    ; nreset     ; 7.259  ; 7.255  ; Rise       ; nreset          ;
+; port_A_we           ; nreset     ; 5.190  ; 5.339  ; Rise       ; nreset          ;
+; port_A_addr[*]      ; nreset     ; 10.364 ; 10.332 ; Fall       ; nreset          ;
+;  port_A_addr[0]     ; nreset     ; 9.713  ; 9.658  ; Fall       ; nreset          ;
+;  port_A_addr[1]     ; nreset     ; 9.693  ; 9.657  ; Fall       ; nreset          ;
+;  port_A_addr[2]     ; nreset     ; 9.683  ; 9.645  ; Fall       ; nreset          ;
+;  port_A_addr[3]     ; nreset     ; 9.825  ; 9.935  ; Fall       ; nreset          ;
+;  port_A_addr[4]     ; nreset     ; 10.364 ; 10.332 ; Fall       ; nreset          ;
+;  port_A_addr[5]     ; nreset     ; 9.279  ; 9.325  ; Fall       ; nreset          ;
+;  port_A_addr[6]     ; nreset     ; 9.935  ; 9.933  ; Fall       ; nreset          ;
+;  port_A_addr[7]     ; nreset     ; 9.617  ; 9.752  ; Fall       ; nreset          ;
+;  port_A_addr[8]     ; nreset     ; 9.696  ; 9.684  ; Fall       ; nreset          ;
+;  port_A_addr[9]     ; nreset     ; 9.781  ; 9.743  ; Fall       ; nreset          ;
+;  port_A_addr[10]    ; nreset     ; 9.606  ; 9.575  ; Fall       ; nreset          ;
+;  port_A_addr[11]    ; nreset     ; 7.686  ; 7.626  ; Fall       ; nreset          ;
+;  port_A_addr[12]    ; nreset     ; 7.430  ; 7.391  ; Fall       ; nreset          ;
+;  port_A_addr[13]    ; nreset     ; 7.650  ; 7.598  ; Fall       ; nreset          ;
+;  port_A_addr[14]    ; nreset     ; 6.795  ; 6.866  ; Fall       ; nreset          ;
+;  port_A_addr[15]    ; nreset     ; 7.259  ; 7.255  ; Fall       ; nreset          ;
+; port_A_we           ; nreset     ; 5.190  ; 5.339  ; Fall       ; nreset          ;
++---------------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                   ;
++---------------------+------------+-------+-------+------------+-----------------+
+; Data Port           ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------------+------------+-------+-------+------------+-----------------+
+; done                ; clk        ; 6.974 ; 7.009 ; Rise       ; clk             ;
+; port_A_addr[*]      ; clk        ; 6.965 ; 6.990 ; Rise       ; clk             ;
+;  port_A_addr[0]     ; clk        ; 7.294 ; 7.252 ; Rise       ; clk             ;
+;  port_A_addr[1]     ; clk        ; 7.589 ; 7.595 ; Rise       ; clk             ;
+;  port_A_addr[2]     ; clk        ; 7.249 ; 7.233 ; Rise       ; clk             ;
+;  port_A_addr[3]     ; clk        ; 7.602 ; 7.702 ; Rise       ; clk             ;
+;  port_A_addr[4]     ; clk        ; 8.004 ; 7.971 ; Rise       ; clk             ;
+;  port_A_addr[5]     ; clk        ; 6.965 ; 6.990 ; Rise       ; clk             ;
+;  port_A_addr[6]     ; clk        ; 7.334 ; 7.323 ; Rise       ; clk             ;
+;  port_A_addr[7]     ; clk        ; 7.431 ; 7.547 ; Rise       ; clk             ;
+;  port_A_addr[8]     ; clk        ; 7.496 ; 7.431 ; Rise       ; clk             ;
+;  port_A_addr[9]     ; clk        ; 7.628 ; 7.624 ; Rise       ; clk             ;
+;  port_A_addr[10]    ; clk        ; 7.469 ; 7.473 ; Rise       ; clk             ;
+;  port_A_addr[11]    ; clk        ; 8.072 ; 8.039 ; Rise       ; clk             ;
+;  port_A_addr[12]    ; clk        ; 7.862 ; 7.827 ; Rise       ; clk             ;
+;  port_A_addr[13]    ; clk        ; 8.034 ; 8.008 ; Rise       ; clk             ;
+;  port_A_addr[14]    ; clk        ; 7.175 ; 7.164 ; Rise       ; clk             ;
+;  port_A_addr[15]    ; clk        ; 7.714 ; 7.710 ; Rise       ; clk             ;
+; port_A_clk          ; clk        ; 3.520 ; 3.459 ; Rise       ; clk             ;
+; port_A_data_in[*]   ; clk        ; 5.476 ; 5.397 ; Rise       ; clk             ;
+;  port_A_data_in[0]  ; clk        ; 5.733 ; 5.675 ; Rise       ; clk             ;
+;  port_A_data_in[1]  ; clk        ; 6.289 ; 6.200 ; Rise       ; clk             ;
+;  port_A_data_in[2]  ; clk        ; 7.075 ; 7.001 ; Rise       ; clk             ;
+;  port_A_data_in[3]  ; clk        ; 5.782 ; 5.833 ; Rise       ; clk             ;
+;  port_A_data_in[4]  ; clk        ; 5.684 ; 5.619 ; Rise       ; clk             ;
+;  port_A_data_in[5]  ; clk        ; 5.944 ; 5.991 ; Rise       ; clk             ;
+;  port_A_data_in[6]  ; clk        ; 5.484 ; 5.400 ; Rise       ; clk             ;
+;  port_A_data_in[7]  ; clk        ; 5.784 ; 5.841 ; Rise       ; clk             ;
+;  port_A_data_in[8]  ; clk        ; 6.480 ; 6.354 ; Rise       ; clk             ;
+;  port_A_data_in[9]  ; clk        ; 5.938 ; 5.772 ; Rise       ; clk             ;
+;  port_A_data_in[10] ; clk        ; 6.252 ; 6.272 ; Rise       ; clk             ;
+;  port_A_data_in[11] ; clk        ; 6.806 ; 6.726 ; Rise       ; clk             ;
+;  port_A_data_in[12] ; clk        ; 6.164 ; 6.185 ; Rise       ; clk             ;
+;  port_A_data_in[13] ; clk        ; 5.938 ; 5.991 ; Rise       ; clk             ;
+;  port_A_data_in[14] ; clk        ; 6.886 ; 6.739 ; Rise       ; clk             ;
+;  port_A_data_in[15] ; clk        ; 5.566 ; 5.542 ; Rise       ; clk             ;
+;  port_A_data_in[16] ; clk        ; 6.954 ; 7.018 ; Rise       ; clk             ;
+;  port_A_data_in[17] ; clk        ; 6.902 ; 6.780 ; Rise       ; clk             ;
+;  port_A_data_in[18] ; clk        ; 6.278 ; 6.220 ; Rise       ; clk             ;
+;  port_A_data_in[19] ; clk        ; 5.793 ; 5.690 ; Rise       ; clk             ;
+;  port_A_data_in[20] ; clk        ; 5.476 ; 5.397 ; Rise       ; clk             ;
+;  port_A_data_in[21] ; clk        ; 5.791 ; 5.704 ; Rise       ; clk             ;
+;  port_A_data_in[22] ; clk        ; 5.739 ; 5.737 ; Rise       ; clk             ;
+;  port_A_data_in[23] ; clk        ; 5.656 ; 5.571 ; Rise       ; clk             ;
+;  port_A_data_in[24] ; clk        ; 5.943 ; 5.987 ; Rise       ; clk             ;
+;  port_A_data_in[25] ; clk        ; 6.506 ; 6.454 ; Rise       ; clk             ;
+;  port_A_data_in[26] ; clk        ; 5.841 ; 5.733 ; Rise       ; clk             ;
+;  port_A_data_in[27] ; clk        ; 6.030 ; 6.057 ; Rise       ; clk             ;
+;  port_A_data_in[28] ; clk        ; 6.181 ; 6.188 ; Rise       ; clk             ;
+;  port_A_data_in[29] ; clk        ; 6.739 ; 6.738 ; Rise       ; clk             ;
+;  port_A_data_in[30] ; clk        ; 5.579 ; 5.503 ; Rise       ; clk             ;
+;  port_A_data_in[31] ; clk        ; 5.901 ; 5.873 ; Rise       ; clk             ;
+; port_A_we           ; clk        ; 5.937 ; 5.906 ; Rise       ; clk             ;
+; rle_size[*]         ; clk        ; 4.898 ; 4.888 ; Rise       ; clk             ;
+;  rle_size[1]        ; clk        ; 4.898 ; 4.888 ; Rise       ; clk             ;
+;  rle_size[2]        ; clk        ; 5.509 ; 5.514 ; Rise       ; clk             ;
+;  rle_size[3]        ; clk        ; 5.798 ; 5.861 ; Rise       ; clk             ;
+;  rle_size[4]        ; clk        ; 5.215 ; 5.224 ; Rise       ; clk             ;
+;  rle_size[5]        ; clk        ; 5.389 ; 5.395 ; Rise       ; clk             ;
+;  rle_size[6]        ; clk        ; 5.320 ; 5.330 ; Rise       ; clk             ;
+;  rle_size[7]        ; clk        ; 5.569 ; 5.519 ; Rise       ; clk             ;
+;  rle_size[8]        ; clk        ; 5.427 ; 5.427 ; Rise       ; clk             ;
+;  rle_size[9]        ; clk        ; 5.328 ; 5.417 ; Rise       ; clk             ;
+;  rle_size[10]       ; clk        ; 5.384 ; 5.328 ; Rise       ; clk             ;
+;  rle_size[11]       ; clk        ; 5.591 ; 5.520 ; Rise       ; clk             ;
+;  rle_size[12]       ; clk        ; 5.440 ; 5.513 ; Rise       ; clk             ;
+;  rle_size[13]       ; clk        ; 5.581 ; 5.527 ; Rise       ; clk             ;
+;  rle_size[14]       ; clk        ; 5.209 ; 5.171 ; Rise       ; clk             ;
+;  rle_size[15]       ; clk        ; 5.722 ; 5.792 ; Rise       ; clk             ;
+;  rle_size[16]       ; clk        ; 5.472 ; 5.462 ; Rise       ; clk             ;
+;  rle_size[17]       ; clk        ; 5.854 ; 5.795 ; Rise       ; clk             ;
+;  rle_size[18]       ; clk        ; 5.880 ; 5.816 ; Rise       ; clk             ;
+;  rle_size[19]       ; clk        ; 6.240 ; 6.159 ; Rise       ; clk             ;
+;  rle_size[20]       ; clk        ; 5.742 ; 5.702 ; Rise       ; clk             ;
+;  rle_size[21]       ; clk        ; 5.719 ; 5.646 ; Rise       ; clk             ;
+;  rle_size[22]       ; clk        ; 5.259 ; 5.216 ; Rise       ; clk             ;
+;  rle_size[23]       ; clk        ; 5.278 ; 5.257 ; Rise       ; clk             ;
+;  rle_size[24]       ; clk        ; 5.605 ; 5.534 ; Rise       ; clk             ;
+;  rle_size[25]       ; clk        ; 6.734 ; 6.779 ; Rise       ; clk             ;
+;  rle_size[26]       ; clk        ; 5.329 ; 5.413 ; Rise       ; clk             ;
+;  rle_size[27]       ; clk        ; 6.206 ; 6.151 ; Rise       ; clk             ;
+;  rle_size[28]       ; clk        ; 5.612 ; 5.543 ; Rise       ; clk             ;
+;  rle_size[29]       ; clk        ; 5.321 ; 5.292 ; Rise       ; clk             ;
+;  rle_size[30]       ; clk        ; 5.122 ; 5.105 ; Rise       ; clk             ;
+;  rle_size[31]       ; clk        ; 6.487 ; 6.372 ; Rise       ; clk             ;
+; port_A_clk          ; clk        ; 3.520 ; 3.459 ; Fall       ; clk             ;
+; port_A_addr[*]      ; nreset     ; 6.256 ; 6.336 ; Rise       ; nreset          ;
+;  port_A_addr[0]     ; nreset     ; 9.137 ; 9.096 ; Rise       ; nreset          ;
+;  port_A_addr[1]     ; nreset     ; 9.111 ; 9.088 ; Rise       ; nreset          ;
+;  port_A_addr[2]     ; nreset     ; 9.101 ; 9.077 ; Rise       ; nreset          ;
+;  port_A_addr[3]     ; nreset     ; 9.257 ; 9.343 ; Rise       ; nreset          ;
+;  port_A_addr[4]     ; nreset     ; 9.651 ; 9.597 ; Rise       ; nreset          ;
+;  port_A_addr[5]     ; nreset     ; 8.638 ; 8.665 ; Rise       ; nreset          ;
+;  port_A_addr[6]     ; nreset     ; 9.385 ; 9.366 ; Rise       ; nreset          ;
+;  port_A_addr[7]     ; nreset     ; 8.943 ; 9.046 ; Rise       ; nreset          ;
+;  port_A_addr[8]     ; nreset     ; 9.035 ; 9.006 ; Rise       ; nreset          ;
+;  port_A_addr[9]     ; nreset     ; 9.200 ; 9.175 ; Rise       ; nreset          ;
+;  port_A_addr[10]    ; nreset     ; 9.026 ; 9.009 ; Rise       ; nreset          ;
+;  port_A_addr[11]    ; nreset     ; 7.051 ; 7.034 ; Rise       ; nreset          ;
+;  port_A_addr[12]    ; nreset     ; 6.848 ; 6.815 ; Rise       ; nreset          ;
+;  port_A_addr[13]    ; nreset     ; 7.013 ; 7.004 ; Rise       ; nreset          ;
+;  port_A_addr[14]    ; nreset     ; 6.256 ; 6.336 ; Rise       ; nreset          ;
+;  port_A_addr[15]    ; nreset     ; 6.699 ; 6.697 ; Rise       ; nreset          ;
+; port_A_we           ; nreset     ; 4.916 ; 5.050 ; Rise       ; nreset          ;
+; port_A_addr[*]      ; nreset     ; 6.256 ; 6.336 ; Fall       ; nreset          ;
+;  port_A_addr[0]     ; nreset     ; 9.137 ; 9.096 ; Fall       ; nreset          ;
+;  port_A_addr[1]     ; nreset     ; 9.111 ; 9.088 ; Fall       ; nreset          ;
+;  port_A_addr[2]     ; nreset     ; 9.101 ; 9.077 ; Fall       ; nreset          ;
+;  port_A_addr[3]     ; nreset     ; 9.257 ; 9.343 ; Fall       ; nreset          ;
+;  port_A_addr[4]     ; nreset     ; 9.651 ; 9.597 ; Fall       ; nreset          ;
+;  port_A_addr[5]     ; nreset     ; 8.638 ; 8.665 ; Fall       ; nreset          ;
+;  port_A_addr[6]     ; nreset     ; 9.385 ; 9.366 ; Fall       ; nreset          ;
+;  port_A_addr[7]     ; nreset     ; 8.943 ; 9.046 ; Fall       ; nreset          ;
+;  port_A_addr[8]     ; nreset     ; 9.035 ; 9.006 ; Fall       ; nreset          ;
+;  port_A_addr[9]     ; nreset     ; 9.200 ; 9.175 ; Fall       ; nreset          ;
+;  port_A_addr[10]    ; nreset     ; 9.026 ; 9.009 ; Fall       ; nreset          ;
+;  port_A_addr[11]    ; nreset     ; 7.051 ; 7.034 ; Fall       ; nreset          ;
+;  port_A_addr[12]    ; nreset     ; 6.848 ; 6.815 ; Fall       ; nreset          ;
+;  port_A_addr[13]    ; nreset     ; 7.013 ; 7.004 ; Fall       ; nreset          ;
+;  port_A_addr[14]    ; nreset     ; 6.256 ; 6.336 ; Fall       ; nreset          ;
+;  port_A_addr[15]    ; nreset     ; 6.699 ; 6.697 ; Fall       ; nreset          ;
+; port_A_we           ; nreset     ; 4.916 ; 5.050 ; Fall       ; nreset          ;
++---------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Propagation Delay                                                      ;
++------------------+-----------------+--------+--------+--------+--------+
+; Input Port       ; Output Port     ; RR     ; RF     ; FR     ; FF     ;
++------------------+-----------------+--------+--------+--------+--------+
+; message_addr[0]  ; port_A_addr[0]  ; 9.288  ;        ;        ; 9.262  ;
+; message_addr[1]  ; port_A_addr[1]  ; 9.374  ;        ;        ; 9.299  ;
+; message_addr[2]  ; port_A_addr[2]  ; 9.773  ; 9.732  ; 9.791  ; 9.732  ;
+; message_addr[2]  ; port_A_addr[3]  ; 9.899  ; 9.982  ; 9.897  ; 9.988  ;
+; message_addr[2]  ; port_A_addr[4]  ; 10.280 ; 10.204 ; 10.319 ; 10.211 ;
+; message_addr[2]  ; port_A_addr[5]  ; 9.427  ; 9.370  ; 9.425  ; 9.376  ;
+; message_addr[2]  ; port_A_addr[6]  ; 10.138 ; 10.029 ; 10.177 ; 10.036 ;
+; message_addr[2]  ; port_A_addr[7]  ; 9.803  ; 9.838  ; 9.801  ; 9.844  ;
+; message_addr[2]  ; port_A_addr[8]  ; 9.642  ; 9.580  ; 9.681  ; 9.587  ;
+; message_addr[2]  ; port_A_addr[9]  ; 10.187 ; 10.084 ; 10.185 ; 10.090 ;
+; message_addr[2]  ; port_A_addr[10] ; 9.963  ; 9.825  ; 10.002 ; 9.832  ;
+; message_addr[2]  ; port_A_addr[11] ; 10.601 ; 10.475 ; 10.599 ; 10.481 ;
+; message_addr[2]  ; port_A_addr[12] ; 10.612 ; 10.509 ; 10.659 ; 10.524 ;
+; message_addr[2]  ; port_A_addr[13] ; 10.425 ; 10.337 ; 10.431 ; 10.351 ;
+; message_addr[2]  ; port_A_addr[14] ; 9.503  ; 9.502  ; 9.550  ; 9.517  ;
+; message_addr[2]  ; port_A_addr[15] ; 10.247 ; 10.183 ; 10.253 ; 10.197 ;
+; message_addr[3]  ; port_A_addr[3]  ; 9.810  ; 9.961  ; 9.787  ; 9.915  ;
+; message_addr[3]  ; port_A_addr[4]  ; 10.339 ; 10.263 ; 10.331 ; 10.223 ;
+; message_addr[3]  ; port_A_addr[5]  ; 9.486  ; 9.429  ; 9.437  ; 9.388  ;
+; message_addr[3]  ; port_A_addr[6]  ; 10.197 ; 10.088 ; 10.189 ; 10.048 ;
+; message_addr[3]  ; port_A_addr[7]  ; 9.862  ; 9.897  ; 9.813  ; 9.856  ;
+; message_addr[3]  ; port_A_addr[8]  ; 9.701  ; 9.639  ; 9.693  ; 9.599  ;
+; message_addr[3]  ; port_A_addr[9]  ; 10.246 ; 10.143 ; 10.197 ; 10.102 ;
+; message_addr[3]  ; port_A_addr[10] ; 10.022 ; 9.884  ; 10.014 ; 9.844  ;
+; message_addr[3]  ; port_A_addr[11] ; 10.660 ; 10.534 ; 10.611 ; 10.493 ;
+; message_addr[3]  ; port_A_addr[12] ; 10.671 ; 10.568 ; 10.671 ; 10.536 ;
+; message_addr[3]  ; port_A_addr[13] ; 10.484 ; 10.396 ; 10.443 ; 10.363 ;
+; message_addr[3]  ; port_A_addr[14] ; 9.562  ; 9.561  ; 9.562  ; 9.529  ;
+; message_addr[3]  ; port_A_addr[15] ; 10.306 ; 10.242 ; 10.265 ; 10.209 ;
+; message_addr[4]  ; port_A_addr[4]  ; 10.127 ; 10.109 ; 10.069 ; 10.033 ;
+; message_addr[4]  ; port_A_addr[5]  ; 9.377  ; 9.320  ; 9.299  ; 9.250  ;
+; message_addr[4]  ; port_A_addr[6]  ; 10.088 ; 9.979  ; 10.051 ; 9.910  ;
+; message_addr[4]  ; port_A_addr[7]  ; 9.753  ; 9.788  ; 9.675  ; 9.718  ;
+; message_addr[4]  ; port_A_addr[8]  ; 9.592  ; 9.530  ; 9.555  ; 9.461  ;
+; message_addr[4]  ; port_A_addr[9]  ; 10.137 ; 10.034 ; 10.059 ; 9.964  ;
+; message_addr[4]  ; port_A_addr[10] ; 9.913  ; 9.775  ; 9.876  ; 9.706  ;
+; message_addr[4]  ; port_A_addr[11] ; 10.551 ; 10.425 ; 10.473 ; 10.355 ;
+; message_addr[4]  ; port_A_addr[12] ; 10.562 ; 10.459 ; 10.533 ; 10.398 ;
+; message_addr[4]  ; port_A_addr[13] ; 10.375 ; 10.287 ; 10.305 ; 10.225 ;
+; message_addr[4]  ; port_A_addr[14] ; 9.453  ; 9.452  ; 9.424  ; 9.391  ;
+; message_addr[4]  ; port_A_addr[15] ; 10.197 ; 10.133 ; 10.127 ; 10.071 ;
+; message_addr[5]  ; port_A_addr[5]  ; 9.208  ; 9.216  ; 9.201  ; 9.191  ;
+; message_addr[5]  ; port_A_addr[6]  ; 10.064 ; 9.955  ; 10.078 ; 9.937  ;
+; message_addr[5]  ; port_A_addr[7]  ; 9.729  ; 9.764  ; 9.702  ; 9.745  ;
+; message_addr[5]  ; port_A_addr[8]  ; 9.568  ; 9.506  ; 9.582  ; 9.488  ;
+; message_addr[5]  ; port_A_addr[9]  ; 10.113 ; 10.010 ; 10.086 ; 9.991  ;
+; message_addr[5]  ; port_A_addr[10] ; 9.889  ; 9.751  ; 9.903  ; 9.733  ;
+; message_addr[5]  ; port_A_addr[11] ; 10.527 ; 10.401 ; 10.500 ; 10.382 ;
+; message_addr[5]  ; port_A_addr[12] ; 10.538 ; 10.435 ; 10.560 ; 10.425 ;
+; message_addr[5]  ; port_A_addr[13] ; 10.351 ; 10.263 ; 10.332 ; 10.252 ;
+; message_addr[5]  ; port_A_addr[14] ; 9.429  ; 9.428  ; 9.451  ; 9.418  ;
+; message_addr[5]  ; port_A_addr[15] ; 10.173 ; 10.109 ; 10.154 ; 10.098 ;
+; message_addr[6]  ; port_A_addr[6]  ; 10.062 ; 10.007 ; 10.068 ; 10.001 ;
+; message_addr[6]  ; port_A_addr[7]  ; 9.829  ; 9.864  ; 9.814  ; 9.857  ;
+; message_addr[6]  ; port_A_addr[8]  ; 9.668  ; 9.606  ; 9.694  ; 9.600  ;
+; message_addr[6]  ; port_A_addr[9]  ; 10.213 ; 10.110 ; 10.198 ; 10.103 ;
+; message_addr[6]  ; port_A_addr[10] ; 9.989  ; 9.851  ; 10.015 ; 9.845  ;
+; message_addr[6]  ; port_A_addr[11] ; 10.627 ; 10.501 ; 10.612 ; 10.494 ;
+; message_addr[6]  ; port_A_addr[12] ; 10.638 ; 10.535 ; 10.672 ; 10.537 ;
+; message_addr[6]  ; port_A_addr[13] ; 10.451 ; 10.363 ; 10.444 ; 10.364 ;
+; message_addr[6]  ; port_A_addr[14] ; 9.529  ; 9.528  ; 9.563  ; 9.530  ;
+; message_addr[6]  ; port_A_addr[15] ; 10.273 ; 10.209 ; 10.266 ; 10.210 ;
+; message_addr[7]  ; port_A_addr[7]  ; 9.617  ; 9.720  ; 9.613  ; 9.693  ;
+; message_addr[7]  ; port_A_addr[8]  ; 9.604  ; 9.542  ; 9.615  ; 9.521  ;
+; message_addr[7]  ; port_A_addr[9]  ; 10.149 ; 10.046 ; 10.119 ; 10.024 ;
+; message_addr[7]  ; port_A_addr[10] ; 9.925  ; 9.787  ; 9.936  ; 9.766  ;
+; message_addr[7]  ; port_A_addr[11] ; 10.563 ; 10.437 ; 10.533 ; 10.415 ;
+; message_addr[7]  ; port_A_addr[12] ; 10.574 ; 10.471 ; 10.593 ; 10.458 ;
+; message_addr[7]  ; port_A_addr[13] ; 10.387 ; 10.299 ; 10.365 ; 10.285 ;
+; message_addr[7]  ; port_A_addr[14] ; 9.465  ; 9.464  ; 9.484  ; 9.451  ;
+; message_addr[7]  ; port_A_addr[15] ; 10.209 ; 10.145 ; 10.187 ; 10.131 ;
+; message_addr[8]  ; port_A_addr[8]  ; 10.113 ; 10.105 ; 10.058 ; 10.038 ;
+; message_addr[8]  ; port_A_addr[9]  ; 10.760 ; 10.657 ; 10.684 ; 10.589 ;
+; message_addr[8]  ; port_A_addr[10] ; 10.536 ; 10.398 ; 10.501 ; 10.331 ;
+; message_addr[8]  ; port_A_addr[11] ; 11.174 ; 11.048 ; 11.098 ; 10.980 ;
+; message_addr[8]  ; port_A_addr[12] ; 11.185 ; 11.082 ; 11.158 ; 11.023 ;
+; message_addr[8]  ; port_A_addr[13] ; 10.998 ; 10.910 ; 10.930 ; 10.850 ;
+; message_addr[8]  ; port_A_addr[14] ; 10.076 ; 10.075 ; 10.049 ; 10.016 ;
+; message_addr[8]  ; port_A_addr[15] ; 10.820 ; 10.756 ; 10.752 ; 10.696 ;
+; message_addr[9]  ; port_A_addr[9]  ; 9.777  ; 9.742  ; 9.768  ; 9.710  ;
+; message_addr[9]  ; port_A_addr[10] ; 9.701  ; 9.563  ; 9.707  ; 9.537  ;
+; message_addr[9]  ; port_A_addr[11] ; 10.339 ; 10.213 ; 10.304 ; 10.186 ;
+; message_addr[9]  ; port_A_addr[12] ; 10.350 ; 10.247 ; 10.364 ; 10.229 ;
+; message_addr[9]  ; port_A_addr[13] ; 10.163 ; 10.075 ; 10.136 ; 10.056 ;
+; message_addr[9]  ; port_A_addr[14] ; 9.241  ; 9.240  ; 9.255  ; 9.222  ;
+; message_addr[9]  ; port_A_addr[15] ; 9.985  ; 9.921  ; 9.958  ; 9.902  ;
+; message_addr[10] ; port_A_addr[10] ; 9.563  ; 9.483  ; 9.579  ; 9.481  ;
+; message_addr[10] ; port_A_addr[11] ; 10.304 ; 10.178 ; 10.300 ; 10.182 ;
+; message_addr[10] ; port_A_addr[12] ; 10.315 ; 10.212 ; 10.360 ; 10.225 ;
+; message_addr[10] ; port_A_addr[13] ; 10.128 ; 10.040 ; 10.132 ; 10.052 ;
+; message_addr[10] ; port_A_addr[14] ; 9.206  ; 9.205  ; 9.251  ; 9.218  ;
+; message_addr[10] ; port_A_addr[15] ; 9.950  ; 9.886  ; 9.954  ; 9.898  ;
+; message_addr[11] ; port_A_addr[11] ; 10.247 ; 10.189 ; 10.269 ; 10.188 ;
+; message_addr[11] ; port_A_addr[12] ; 10.500 ; 10.397 ; 10.542 ; 10.407 ;
+; message_addr[11] ; port_A_addr[13] ; 10.313 ; 10.225 ; 10.314 ; 10.234 ;
+; message_addr[11] ; port_A_addr[14] ; 9.391  ; 9.390  ; 9.433  ; 9.400  ;
+; message_addr[11] ; port_A_addr[15] ; 10.135 ; 10.071 ; 10.136 ; 10.080 ;
+; message_addr[12] ; port_A_addr[12] ; 10.409 ; 10.367 ; 10.369 ; 10.304 ;
+; message_addr[12] ; port_A_addr[13] ; 10.328 ; 10.240 ; 10.262 ; 10.182 ;
+; message_addr[12] ; port_A_addr[14] ; 9.406  ; 9.405  ; 9.381  ; 9.348  ;
+; message_addr[12] ; port_A_addr[15] ; 10.150 ; 10.086 ; 10.084 ; 10.028 ;
+; message_addr[13] ; port_A_addr[13] ; 10.122 ; 10.099 ; 10.091 ; 10.050 ;
+; message_addr[13] ; port_A_addr[14] ; 9.345  ; 9.344  ; 9.335  ; 9.302  ;
+; message_addr[13] ; port_A_addr[15] ; 10.089 ; 10.025 ; 10.038 ; 9.982  ;
+; message_addr[14] ; port_A_addr[14] ; 9.162  ; 9.215  ; 9.229  ; 9.270  ;
+; message_addr[14] ; port_A_addr[15] ; 10.008 ; 9.944  ; 10.054 ; 9.998  ;
+; message_addr[15] ; port_A_addr[15] ; 10.095 ; 10.099 ; 10.068 ; 10.049 ;
+; rle_addr[0]      ; port_A_addr[0]  ; 8.959  ;        ;        ; 8.880  ;
+; rle_addr[1]      ; port_A_addr[1]  ; 9.616  ; 9.513  ; 9.677  ; 9.570  ;
+; rle_addr[1]      ; port_A_addr[2]  ; 10.231 ; 10.063 ; 10.273 ; 10.113 ;
+; rle_addr[1]      ; port_A_addr[3]  ; 9.987  ; 9.989  ; 10.070 ; 10.040 ;
+; rle_addr[1]      ; port_A_addr[4]  ; 10.388 ; 10.220 ; 10.430 ; 10.270 ;
+; rle_addr[1]      ; port_A_addr[5]  ; 9.283  ; 9.210  ; 9.366  ; 9.261  ;
+; rle_addr[1]      ; port_A_addr[6]  ; 10.140 ; 9.979  ; 10.182 ; 10.029 ;
+; rle_addr[1]      ; port_A_addr[7]  ; 9.645  ; 9.655  ; 9.728  ; 9.706  ;
+; rle_addr[1]      ; port_A_addr[8]  ; 9.774  ; 9.651  ; 9.816  ; 9.701  ;
+; rle_addr[1]      ; port_A_addr[9]  ; 9.992  ; 9.820  ; 10.075 ; 9.871  ;
+; rle_addr[1]      ; port_A_addr[10] ; 10.113 ; 9.971  ; 10.155 ; 10.021 ;
+; rle_addr[1]      ; port_A_addr[11] ; 10.106 ; 9.976  ; 10.197 ; 10.035 ;
+; rle_addr[1]      ; port_A_addr[12] ; 10.181 ; 10.067 ; 10.231 ; 10.125 ;
+; rle_addr[1]      ; port_A_addr[13] ; 10.194 ; 10.072 ; 10.285 ; 10.131 ;
+; rle_addr[1]      ; port_A_addr[14] ; 9.150  ; 9.141  ; 9.200  ; 9.199  ;
+; rle_addr[1]      ; port_A_addr[15] ; 10.232 ; 10.140 ; 10.323 ; 10.199 ;
+; rle_addr[2]      ; port_A_addr[2]  ; 10.372 ; 10.265 ; 10.428 ; 10.309 ;
+; rle_addr[2]      ; port_A_addr[3]  ; 10.272 ; 10.274 ; 10.348 ; 10.318 ;
+; rle_addr[2]      ; port_A_addr[4]  ; 10.673 ; 10.505 ; 10.708 ; 10.548 ;
+; rle_addr[2]      ; port_A_addr[5]  ; 9.568  ; 9.495  ; 9.644  ; 9.539  ;
+; rle_addr[2]      ; port_A_addr[6]  ; 10.425 ; 10.264 ; 10.460 ; 10.307 ;
+; rle_addr[2]      ; port_A_addr[7]  ; 9.930  ; 9.940  ; 10.006 ; 9.984  ;
+; rle_addr[2]      ; port_A_addr[8]  ; 10.059 ; 9.936  ; 10.094 ; 9.979  ;
+; rle_addr[2]      ; port_A_addr[9]  ; 10.277 ; 10.105 ; 10.353 ; 10.149 ;
+; rle_addr[2]      ; port_A_addr[10] ; 10.398 ; 10.256 ; 10.433 ; 10.299 ;
+; rle_addr[2]      ; port_A_addr[11] ; 10.391 ; 10.261 ; 10.475 ; 10.313 ;
+; rle_addr[2]      ; port_A_addr[12] ; 10.466 ; 10.352 ; 10.509 ; 10.403 ;
+; rle_addr[2]      ; port_A_addr[13] ; 10.479 ; 10.357 ; 10.563 ; 10.409 ;
+; rle_addr[2]      ; port_A_addr[14] ; 9.435  ; 9.426  ; 9.478  ; 9.477  ;
+; rle_addr[2]      ; port_A_addr[15] ; 10.517 ; 10.425 ; 10.601 ; 10.477 ;
+; rle_addr[3]      ; port_A_addr[3]  ; 10.230 ; 10.293 ; 10.273 ; 10.313 ;
+; rle_addr[3]      ; port_A_addr[4]  ; 10.737 ; 10.569 ; 10.754 ; 10.594 ;
+; rle_addr[3]      ; port_A_addr[5]  ; 9.632  ; 9.559  ; 9.690  ; 9.585  ;
+; rle_addr[3]      ; port_A_addr[6]  ; 10.489 ; 10.328 ; 10.506 ; 10.353 ;
+; rle_addr[3]      ; port_A_addr[7]  ; 9.994  ; 10.004 ; 10.052 ; 10.030 ;
+; rle_addr[3]      ; port_A_addr[8]  ; 10.123 ; 10.000 ; 10.140 ; 10.025 ;
+; rle_addr[3]      ; port_A_addr[9]  ; 10.341 ; 10.169 ; 10.399 ; 10.195 ;
+; rle_addr[3]      ; port_A_addr[10] ; 10.462 ; 10.320 ; 10.479 ; 10.345 ;
+; rle_addr[3]      ; port_A_addr[11] ; 10.455 ; 10.325 ; 10.521 ; 10.359 ;
+; rle_addr[3]      ; port_A_addr[12] ; 10.530 ; 10.416 ; 10.555 ; 10.449 ;
+; rle_addr[3]      ; port_A_addr[13] ; 10.543 ; 10.421 ; 10.609 ; 10.455 ;
+; rle_addr[3]      ; port_A_addr[14] ; 9.499  ; 9.490  ; 9.524  ; 9.523  ;
+; rle_addr[3]      ; port_A_addr[15] ; 10.581 ; 10.489 ; 10.647 ; 10.523 ;
+; rle_addr[4]      ; port_A_addr[4]  ; 10.693 ; 10.593 ; 10.718 ; 10.595 ;
+; rle_addr[4]      ; port_A_addr[5]  ; 9.736  ; 9.663  ; 9.776  ; 9.671  ;
+; rle_addr[4]      ; port_A_addr[6]  ; 10.593 ; 10.432 ; 10.592 ; 10.439 ;
+; rle_addr[4]      ; port_A_addr[7]  ; 10.098 ; 10.108 ; 10.138 ; 10.116 ;
+; rle_addr[4]      ; port_A_addr[8]  ; 10.227 ; 10.104 ; 10.226 ; 10.111 ;
+; rle_addr[4]      ; port_A_addr[9]  ; 10.445 ; 10.273 ; 10.485 ; 10.281 ;
+; rle_addr[4]      ; port_A_addr[10] ; 10.566 ; 10.424 ; 10.565 ; 10.431 ;
+; rle_addr[4]      ; port_A_addr[11] ; 10.559 ; 10.429 ; 10.607 ; 10.445 ;
+; rle_addr[4]      ; port_A_addr[12] ; 10.634 ; 10.520 ; 10.641 ; 10.535 ;
+; rle_addr[4]      ; port_A_addr[13] ; 10.647 ; 10.525 ; 10.695 ; 10.541 ;
+; rle_addr[4]      ; port_A_addr[14] ; 9.603  ; 9.594  ; 9.610  ; 9.609  ;
+; rle_addr[4]      ; port_A_addr[15] ; 10.685 ; 10.593 ; 10.733 ; 10.609 ;
+; rle_addr[5]      ; port_A_addr[5]  ; 9.289  ; 9.254  ; 9.358  ; 9.314  ;
+; rle_addr[5]      ; port_A_addr[6]  ; 10.221 ; 10.060 ; 10.269 ; 10.116 ;
+; rle_addr[5]      ; port_A_addr[7]  ; 9.726  ; 9.736  ; 9.815  ; 9.793  ;
+; rle_addr[5]      ; port_A_addr[8]  ; 9.855  ; 9.732  ; 9.903  ; 9.788  ;
+; rle_addr[5]      ; port_A_addr[9]  ; 10.073 ; 9.901  ; 10.162 ; 9.958  ;
+; rle_addr[5]      ; port_A_addr[10] ; 10.194 ; 10.052 ; 10.242 ; 10.108 ;
+; rle_addr[5]      ; port_A_addr[11] ; 10.187 ; 10.057 ; 10.284 ; 10.122 ;
+; rle_addr[5]      ; port_A_addr[12] ; 10.262 ; 10.148 ; 10.318 ; 10.212 ;
+; rle_addr[5]      ; port_A_addr[13] ; 10.275 ; 10.153 ; 10.372 ; 10.218 ;
+; rle_addr[5]      ; port_A_addr[14] ; 9.231  ; 9.222  ; 9.287  ; 9.286  ;
+; rle_addr[5]      ; port_A_addr[15] ; 10.313 ; 10.221 ; 10.410 ; 10.286 ;
+; rle_addr[6]      ; port_A_addr[6]  ; 9.712  ; 9.616  ; 9.769  ; 9.655  ;
+; rle_addr[6]      ; port_A_addr[7]  ; 9.362  ; 9.372  ; 9.440  ; 9.418  ;
+; rle_addr[6]      ; port_A_addr[8]  ; 9.491  ; 9.368  ; 9.528  ; 9.413  ;
+; rle_addr[6]      ; port_A_addr[9]  ; 9.709  ; 9.537  ; 9.787  ; 9.583  ;
+; rle_addr[6]      ; port_A_addr[10] ; 9.830  ; 9.688  ; 9.867  ; 9.733  ;
+; rle_addr[6]      ; port_A_addr[11] ; 9.823  ; 9.693  ; 9.909  ; 9.747  ;
+; rle_addr[6]      ; port_A_addr[12] ; 9.898  ; 9.784  ; 9.943  ; 9.837  ;
+; rle_addr[6]      ; port_A_addr[13] ; 9.911  ; 9.789  ; 9.997  ; 9.843  ;
+; rle_addr[6]      ; port_A_addr[14] ; 8.867  ; 8.858  ; 8.912  ; 8.911  ;
+; rle_addr[6]      ; port_A_addr[15] ; 9.949  ; 9.857  ; 10.035 ; 9.911  ;
+; rle_addr[7]      ; port_A_addr[7]  ; 10.501 ; 10.565 ; 10.463 ; 10.515 ;
+; rle_addr[7]      ; port_A_addr[8]  ; 10.732 ; 10.609 ; 10.673 ; 10.558 ;
+; rle_addr[7]      ; port_A_addr[9]  ; 10.950 ; 10.778 ; 10.932 ; 10.728 ;
+; rle_addr[7]      ; port_A_addr[10] ; 11.071 ; 10.929 ; 11.012 ; 10.878 ;
+; rle_addr[7]      ; port_A_addr[11] ; 11.064 ; 10.934 ; 11.054 ; 10.892 ;
+; rle_addr[7]      ; port_A_addr[12] ; 11.139 ; 11.025 ; 11.088 ; 10.982 ;
+; rle_addr[7]      ; port_A_addr[13] ; 11.152 ; 11.030 ; 11.142 ; 10.988 ;
+; rle_addr[7]      ; port_A_addr[14] ; 10.108 ; 10.099 ; 10.057 ; 10.056 ;
+; rle_addr[7]      ; port_A_addr[15] ; 11.190 ; 11.098 ; 11.180 ; 11.056 ;
+; rle_addr[8]      ; port_A_addr[8]  ; 10.600 ; 10.531 ; 10.567 ; 10.494 ;
+; rle_addr[8]      ; port_A_addr[9]  ; 10.962 ; 10.790 ; 10.951 ; 10.747 ;
+; rle_addr[8]      ; port_A_addr[10] ; 11.083 ; 10.941 ; 11.031 ; 10.897 ;
+; rle_addr[8]      ; port_A_addr[11] ; 11.076 ; 10.946 ; 11.073 ; 10.911 ;
+; rle_addr[8]      ; port_A_addr[12] ; 11.151 ; 11.037 ; 11.107 ; 11.001 ;
+; rle_addr[8]      ; port_A_addr[13] ; 11.164 ; 11.042 ; 11.161 ; 11.007 ;
+; rle_addr[8]      ; port_A_addr[14] ; 10.120 ; 10.111 ; 10.076 ; 10.075 ;
+; rle_addr[8]      ; port_A_addr[15] ; 11.202 ; 11.110 ; 11.199 ; 11.075 ;
+; rle_addr[9]      ; port_A_addr[9]  ; 9.813  ; 9.699  ; 9.865  ; 9.733  ;
+; rle_addr[9]      ; port_A_addr[10] ; 10.037 ; 9.895  ; 10.069 ; 9.935  ;
+; rle_addr[9]      ; port_A_addr[11] ; 10.030 ; 9.900  ; 10.111 ; 9.949  ;
+; rle_addr[9]      ; port_A_addr[12] ; 10.105 ; 9.991  ; 10.145 ; 10.039 ;
+; rle_addr[9]      ; port_A_addr[13] ; 10.118 ; 9.996  ; 10.199 ; 10.045 ;
+; rle_addr[9]      ; port_A_addr[14] ; 9.074  ; 9.065  ; 9.114  ; 9.113  ;
+; rle_addr[9]      ; port_A_addr[15] ; 10.156 ; 10.064 ; 10.237 ; 10.113 ;
+; rle_addr[10]     ; port_A_addr[10] ; 9.985  ; 9.911  ; 10.040 ; 9.943  ;
+; rle_addr[10]     ; port_A_addr[11] ; 10.220 ; 10.090 ; 10.295 ; 10.133 ;
+; rle_addr[10]     ; port_A_addr[12] ; 10.295 ; 10.181 ; 10.329 ; 10.223 ;
+; rle_addr[10]     ; port_A_addr[13] ; 10.308 ; 10.186 ; 10.383 ; 10.229 ;
+; rle_addr[10]     ; port_A_addr[14] ; 9.264  ; 9.255  ; 9.298  ; 9.297  ;
+; rle_addr[10]     ; port_A_addr[15] ; 10.346 ; 10.254 ; 10.421 ; 10.297 ;
+; rle_addr[11]     ; port_A_addr[11] ; 10.008 ; 9.932  ; 10.061 ; 9.973  ;
+; rle_addr[11]     ; port_A_addr[12] ; 10.185 ; 10.071 ; 10.217 ; 10.111 ;
+; rle_addr[11]     ; port_A_addr[13] ; 10.198 ; 10.076 ; 10.271 ; 10.117 ;
+; rle_addr[11]     ; port_A_addr[14] ; 9.154  ; 9.145  ; 9.186  ; 9.185  ;
+; rle_addr[11]     ; port_A_addr[15] ; 10.236 ; 10.144 ; 10.309 ; 10.185 ;
+; rle_addr[12]     ; port_A_addr[12] ; 10.100 ; 10.054 ; 10.133 ; 10.064 ;
+; rle_addr[12]     ; port_A_addr[13] ; 10.261 ; 10.139 ; 10.309 ; 10.155 ;
+; rle_addr[12]     ; port_A_addr[14] ; 9.217  ; 9.208  ; 9.224  ; 9.223  ;
+; rle_addr[12]     ; port_A_addr[15] ; 10.299 ; 10.207 ; 10.347 ; 10.223 ;
+; rle_addr[13]     ; port_A_addr[13] ; 10.010 ; 9.926  ; 10.077 ; 9.984  ;
+; rle_addr[13]     ; port_A_addr[14] ; 9.041  ; 9.032  ; 9.087  ; 9.086  ;
+; rle_addr[13]     ; port_A_addr[15] ; 10.123 ; 10.031 ; 10.210 ; 10.086 ;
+; rle_addr[14]     ; port_A_addr[14] ; 8.892  ; 8.948  ; 8.930  ; 8.968  ;
+; rle_addr[14]     ; port_A_addr[15] ; 10.119 ; 10.027 ; 10.178 ; 10.054 ;
+; rle_addr[15]     ; port_A_addr[15] ; 10.599 ; 10.565 ; 10.564 ; 10.512 ;
+; start            ; port_A_addr[0]  ; 9.808  ; 9.753  ; 10.015 ; 9.950  ;
+; start            ; port_A_addr[1]  ; 9.788  ; 9.752  ; 9.995  ; 9.949  ;
+; start            ; port_A_addr[2]  ; 9.778  ; 9.740  ; 9.985  ; 9.937  ;
+; start            ; port_A_addr[3]  ; 9.920  ; 10.030 ; 10.104 ; 10.197 ;
+; start            ; port_A_addr[4]  ; 10.459 ; 10.427 ; 10.621 ; 10.550 ;
+; start            ; port_A_addr[5]  ; 9.374  ; 9.420  ; 9.527  ; 9.545  ;
+; start            ; port_A_addr[6]  ; 10.030 ; 10.028 ; 10.242 ; 10.221 ;
+; start            ; port_A_addr[7]  ; 9.712  ; 9.847  ; 9.873  ; 9.969  ;
+; start            ; port_A_addr[8]  ; 9.791  ; 9.779  ; 9.944  ; 9.904  ;
+; start            ; port_A_addr[9]  ; 9.876  ; 9.838  ; 10.084 ; 10.036 ;
+; start            ; port_A_addr[10] ; 9.701  ; 9.670  ; 9.909  ; 9.868  ;
+; start            ; port_A_addr[11] ; 10.455 ; 10.395 ; 10.488 ; 10.445 ;
+; start            ; port_A_addr[12] ; 10.199 ; 10.160 ; 10.243 ; 10.206 ;
+; start            ; port_A_addr[13] ; 10.419 ; 10.367 ; 10.453 ; 10.418 ;
+; start            ; port_A_addr[14] ; 9.564  ; 9.635  ; 9.600  ; 9.686  ;
+; start            ; port_A_addr[15] ; 10.028 ; 10.024 ; 10.071 ; 10.069 ;
+; start            ; port_A_we       ;        ; 8.108  ; 8.173  ;        ;
++------------------+-----------------+--------+--------+--------+--------+
+
+
++------------------------------------------------------------------------+
+; Minimum Propagation Delay                                              ;
++------------------+-----------------+--------+--------+--------+--------+
+; Input Port       ; Output Port     ; RR     ; RF     ; FR     ; FF     ;
++------------------+-----------------+--------+--------+--------+--------+
+; message_addr[0]  ; port_A_addr[0]  ; 8.831  ;        ;        ; 8.808  ;
+; message_addr[1]  ; port_A_addr[1]  ; 8.913  ;        ;        ; 8.845  ;
+; message_addr[2]  ; port_A_addr[2]  ; 9.207  ; 9.113  ; 9.219  ; 9.138  ;
+; message_addr[2]  ; port_A_addr[3]  ; 9.313  ; 9.376  ; 9.299  ; 9.370  ;
+; message_addr[2]  ; port_A_addr[4]  ; 9.746  ; 9.676  ; 9.770  ; 9.669  ;
+; message_addr[2]  ; port_A_addr[5]  ; 8.941  ; 8.889  ; 8.927  ; 8.883  ;
+; message_addr[2]  ; port_A_addr[6]  ; 9.615  ; 9.514  ; 9.639  ; 9.507  ;
+; message_addr[2]  ; port_A_addr[7]  ; 9.289  ; 9.325  ; 9.275  ; 9.319  ;
+; message_addr[2]  ; port_A_addr[8]  ; 9.150  ; 9.092  ; 9.174  ; 9.085  ;
+; message_addr[2]  ; port_A_addr[9]  ; 9.658  ; 9.564  ; 9.644  ; 9.558  ;
+; message_addr[2]  ; port_A_addr[10] ; 9.418  ; 9.308  ; 9.442  ; 9.301  ;
+; message_addr[2]  ; port_A_addr[11] ; 10.042 ; 9.925  ; 10.028 ; 9.919  ;
+; message_addr[2]  ; port_A_addr[12] ; 10.042 ; 9.950  ; 10.074 ; 9.951  ;
+; message_addr[2]  ; port_A_addr[13] ; 9.870  ; 9.790  ; 9.864  ; 9.792  ;
+; message_addr[2]  ; port_A_addr[14] ; 8.989  ; 9.004  ; 9.021  ; 9.005  ;
+; message_addr[2]  ; port_A_addr[15] ; 9.712  ; 9.653  ; 9.706  ; 9.655  ;
+; message_addr[3]  ; port_A_addr[3]  ; 9.097  ; 9.139  ; 9.060  ; 9.101  ;
+; message_addr[3]  ; port_A_addr[4]  ; 9.798  ; 9.728  ; 9.779  ; 9.678  ;
+; message_addr[3]  ; port_A_addr[5]  ; 8.993  ; 8.941  ; 8.936  ; 8.892  ;
+; message_addr[3]  ; port_A_addr[6]  ; 9.667  ; 9.566  ; 9.648  ; 9.516  ;
+; message_addr[3]  ; port_A_addr[7]  ; 9.341  ; 9.377  ; 9.284  ; 9.328  ;
+; message_addr[3]  ; port_A_addr[8]  ; 9.202  ; 9.144  ; 9.183  ; 9.094  ;
+; message_addr[3]  ; port_A_addr[9]  ; 9.710  ; 9.616  ; 9.653  ; 9.567  ;
+; message_addr[3]  ; port_A_addr[10] ; 9.470  ; 9.360  ; 9.451  ; 9.310  ;
+; message_addr[3]  ; port_A_addr[11] ; 10.094 ; 9.977  ; 10.037 ; 9.928  ;
+; message_addr[3]  ; port_A_addr[12] ; 10.094 ; 10.002 ; 10.083 ; 9.960  ;
+; message_addr[3]  ; port_A_addr[13] ; 9.922  ; 9.842  ; 9.873  ; 9.801  ;
+; message_addr[3]  ; port_A_addr[14] ; 9.041  ; 9.056  ; 9.030  ; 9.014  ;
+; message_addr[3]  ; port_A_addr[15] ; 9.764  ; 9.705  ; 9.715  ; 9.664  ;
+; message_addr[4]  ; port_A_addr[4]  ; 9.564  ; 9.474  ; 9.505  ; 9.428  ;
+; message_addr[4]  ; port_A_addr[5]  ; 8.895  ; 8.843  ; 8.810  ; 8.766  ;
+; message_addr[4]  ; port_A_addr[6]  ; 9.569  ; 9.468  ; 9.522  ; 9.390  ;
+; message_addr[4]  ; port_A_addr[7]  ; 9.243  ; 9.279  ; 9.158  ; 9.202  ;
+; message_addr[4]  ; port_A_addr[8]  ; 9.104  ; 9.046  ; 9.057  ; 8.968  ;
+; message_addr[4]  ; port_A_addr[9]  ; 9.612  ; 9.518  ; 9.527  ; 9.441  ;
+; message_addr[4]  ; port_A_addr[10] ; 9.372  ; 9.262  ; 9.325  ; 9.184  ;
+; message_addr[4]  ; port_A_addr[11] ; 9.996  ; 9.879  ; 9.911  ; 9.802  ;
+; message_addr[4]  ; port_A_addr[12] ; 9.996  ; 9.904  ; 9.957  ; 9.834  ;
+; message_addr[4]  ; port_A_addr[13] ; 9.824  ; 9.744  ; 9.747  ; 9.675  ;
+; message_addr[4]  ; port_A_addr[14] ; 8.943  ; 8.958  ; 8.904  ; 8.888  ;
+; message_addr[4]  ; port_A_addr[15] ; 9.666  ; 9.607  ; 9.589  ; 9.538  ;
+; message_addr[5]  ; port_A_addr[5]  ; 8.703  ; 8.638  ; 8.691  ; 8.639  ;
+; message_addr[5]  ; port_A_addr[6]  ; 9.552  ; 9.451  ; 9.552  ; 9.420  ;
+; message_addr[5]  ; port_A_addr[7]  ; 9.226  ; 9.262  ; 9.188  ; 9.232  ;
+; message_addr[5]  ; port_A_addr[8]  ; 9.087  ; 9.029  ; 9.087  ; 8.998  ;
+; message_addr[5]  ; port_A_addr[9]  ; 9.595  ; 9.501  ; 9.557  ; 9.471  ;
+; message_addr[5]  ; port_A_addr[10] ; 9.355  ; 9.245  ; 9.355  ; 9.214  ;
+; message_addr[5]  ; port_A_addr[11] ; 9.979  ; 9.862  ; 9.941  ; 9.832  ;
+; message_addr[5]  ; port_A_addr[12] ; 9.979  ; 9.887  ; 9.987  ; 9.864  ;
+; message_addr[5]  ; port_A_addr[13] ; 9.807  ; 9.727  ; 9.777  ; 9.705  ;
+; message_addr[5]  ; port_A_addr[14] ; 8.926  ; 8.941  ; 8.934  ; 8.918  ;
+; message_addr[5]  ; port_A_addr[15] ; 9.649  ; 9.590  ; 9.619  ; 9.568  ;
+; message_addr[6]  ; port_A_addr[6]  ; 9.409  ; 9.280  ; 9.405  ; 9.275  ;
+; message_addr[6]  ; port_A_addr[7]  ; 9.319  ; 9.355  ; 9.289  ; 9.333  ;
+; message_addr[6]  ; port_A_addr[8]  ; 9.180  ; 9.122  ; 9.188  ; 9.099  ;
+; message_addr[6]  ; port_A_addr[9]  ; 9.688  ; 9.594  ; 9.658  ; 9.572  ;
+; message_addr[6]  ; port_A_addr[10] ; 9.448  ; 9.338  ; 9.456  ; 9.315  ;
+; message_addr[6]  ; port_A_addr[11] ; 10.072 ; 9.955  ; 10.042 ; 9.933  ;
+; message_addr[6]  ; port_A_addr[12] ; 10.072 ; 9.980  ; 10.088 ; 9.965  ;
+; message_addr[6]  ; port_A_addr[13] ; 9.900  ; 9.820  ; 9.878  ; 9.806  ;
+; message_addr[6]  ; port_A_addr[14] ; 9.019  ; 9.034  ; 9.035  ; 9.019  ;
+; message_addr[6]  ; port_A_addr[15] ; 9.742  ; 9.683  ; 9.720  ; 9.669  ;
+; message_addr[7]  ; port_A_addr[7]  ; 8.990  ; 9.005  ; 8.970  ; 8.984  ;
+; message_addr[7]  ; port_A_addr[8]  ; 9.119  ; 9.061  ; 9.117  ; 9.028  ;
+; message_addr[7]  ; port_A_addr[9]  ; 9.627  ; 9.533  ; 9.587  ; 9.501  ;
+; message_addr[7]  ; port_A_addr[10] ; 9.387  ; 9.277  ; 9.385  ; 9.244  ;
+; message_addr[7]  ; port_A_addr[11] ; 10.011 ; 9.894  ; 9.971  ; 9.862  ;
+; message_addr[7]  ; port_A_addr[12] ; 10.011 ; 9.919  ; 10.017 ; 9.894  ;
+; message_addr[7]  ; port_A_addr[13] ; 9.839  ; 9.759  ; 9.807  ; 9.735  ;
+; message_addr[7]  ; port_A_addr[14] ; 8.958  ; 8.973  ; 8.964  ; 8.948  ;
+; message_addr[7]  ; port_A_addr[15] ; 9.681  ; 9.622  ; 9.649  ; 9.598  ;
+; message_addr[8]  ; port_A_addr[8]  ; 9.464  ; 9.378  ; 9.401  ; 9.314  ;
+; message_addr[8]  ; port_A_addr[9]  ; 10.208 ; 10.114 ; 10.119 ; 10.033 ;
+; message_addr[8]  ; port_A_addr[10] ; 9.968  ; 9.858  ; 9.917  ; 9.776  ;
+; message_addr[8]  ; port_A_addr[11] ; 10.592 ; 10.475 ; 10.503 ; 10.394 ;
+; message_addr[8]  ; port_A_addr[12] ; 10.592 ; 10.500 ; 10.549 ; 10.426 ;
+; message_addr[8]  ; port_A_addr[13] ; 10.420 ; 10.340 ; 10.339 ; 10.267 ;
+; message_addr[8]  ; port_A_addr[14] ; 9.539  ; 9.554  ; 9.496  ; 9.480  ;
+; message_addr[8]  ; port_A_addr[15] ; 10.262 ; 10.203 ; 10.181 ; 10.130 ;
+; message_addr[9]  ; port_A_addr[9]  ; 9.146  ; 9.031  ; 9.123  ; 9.007  ;
+; message_addr[9]  ; port_A_addr[10] ; 9.174  ; 9.064  ; 9.169  ; 9.028  ;
+; message_addr[9]  ; port_A_addr[11] ; 9.798  ; 9.681  ; 9.755  ; 9.646  ;
+; message_addr[9]  ; port_A_addr[12] ; 9.798  ; 9.706  ; 9.801  ; 9.678  ;
+; message_addr[9]  ; port_A_addr[13] ; 9.626  ; 9.546  ; 9.591  ; 9.519  ;
+; message_addr[9]  ; port_A_addr[14] ; 8.745  ; 8.760  ; 8.748  ; 8.732  ;
+; message_addr[9]  ; port_A_addr[15] ; 9.468  ; 9.409  ; 9.433  ; 9.382  ;
+; message_addr[10] ; port_A_addr[10] ; 9.014  ; 8.884  ; 9.022  ; 8.905  ;
+; message_addr[10] ; port_A_addr[11] ; 9.774  ; 9.657  ; 9.756  ; 9.647  ;
+; message_addr[10] ; port_A_addr[12] ; 9.774  ; 9.682  ; 9.802  ; 9.679  ;
+; message_addr[10] ; port_A_addr[13] ; 9.602  ; 9.522  ; 9.592  ; 9.520  ;
+; message_addr[10] ; port_A_addr[14] ; 8.721  ; 8.736  ; 8.749  ; 8.733  ;
+; message_addr[10] ; port_A_addr[15] ; 9.444  ; 9.385  ; 9.434  ; 9.383  ;
+; message_addr[11] ; port_A_addr[11] ; 9.589  ; 9.451  ; 9.593  ; 9.454  ;
+; message_addr[11] ; port_A_addr[12] ; 9.796  ; 9.704  ; 9.817  ; 9.694  ;
+; message_addr[11] ; port_A_addr[13] ; 9.624  ; 9.544  ; 9.607  ; 9.535  ;
+; message_addr[11] ; port_A_addr[14] ; 8.743  ; 8.758  ; 8.764  ; 8.748  ;
+; message_addr[11] ; port_A_addr[15] ; 9.466  ; 9.407  ; 9.449  ; 9.398  ;
+; message_addr[12] ; port_A_addr[12] ; 9.725  ; 9.605  ; 9.673  ; 9.552  ;
+; message_addr[12] ; port_A_addr[13] ; 9.782  ; 9.702  ; 9.710  ; 9.638  ;
+; message_addr[12] ; port_A_addr[14] ; 8.901  ; 8.916  ; 8.867  ; 8.851  ;
+; message_addr[12] ; port_A_addr[15] ; 9.624  ; 9.565  ; 9.552  ; 9.501  ;
+; message_addr[13] ; port_A_addr[13] ; 9.555  ; 9.462  ; 9.520  ; 9.440  ;
+; message_addr[13] ; port_A_addr[14] ; 8.849  ; 8.864  ; 8.826  ; 8.810  ;
+; message_addr[13] ; port_A_addr[15] ; 9.572  ; 9.513  ; 9.511  ; 9.460  ;
+; message_addr[14] ; port_A_addr[14] ; 8.541  ; 8.528  ; 8.593  ; 8.579  ;
+; message_addr[14] ; port_A_addr[15] ; 9.500  ; 9.441  ; 9.526  ; 9.475  ;
+; message_addr[15] ; port_A_addr[15] ; 9.446  ; 9.366  ; 9.405  ; 9.324  ;
+; rle_addr[0]      ; port_A_addr[0]  ; 8.528  ;        ;        ; 8.456  ;
+; rle_addr[1]      ; port_A_addr[1]  ; 8.982  ; 8.817  ; 9.036  ; 8.868  ;
+; rle_addr[1]      ; port_A_addr[2]  ; 9.694  ; 9.539  ; 9.724  ; 9.577  ;
+; rle_addr[1]      ; port_A_addr[3]  ; 9.473  ; 9.476  ; 9.541  ; 9.513  ;
+; rle_addr[1]      ; port_A_addr[4]  ; 9.845  ; 9.690  ; 9.875  ; 9.728  ;
+; rle_addr[1]      ; port_A_addr[5]  ; 8.806  ; 8.740  ; 8.874  ; 8.777  ;
+; rle_addr[1]      ; port_A_addr[6]  ; 9.577  ; 9.465  ; 9.607  ; 9.503  ;
+; rle_addr[1]      ; port_A_addr[7]  ; 9.142  ; 9.154  ; 9.210  ; 9.191  ;
+; rle_addr[1]      ; port_A_addr[8]  ; 9.271  ; 9.156  ; 9.301  ; 9.194  ;
+; rle_addr[1]      ; port_A_addr[9]  ; 9.476  ; 9.318  ; 9.544  ; 9.355  ;
+; rle_addr[1]      ; port_A_addr[10] ; 9.577  ; 9.448  ; 9.607  ; 9.486  ;
+; rle_addr[1]      ; port_A_addr[11] ; 9.579  ; 9.461  ; 9.655  ; 9.506  ;
+; rle_addr[1]      ; port_A_addr[12] ; 9.640  ; 9.535  ; 9.678  ; 9.581  ;
+; rle_addr[1]      ; port_A_addr[13] ; 9.655  ; 9.544  ; 9.731  ; 9.589  ;
+; rle_addr[1]      ; port_A_addr[14] ; 8.686  ; 8.679  ; 8.724  ; 8.725  ;
+; rle_addr[1]      ; port_A_addr[15] ; 9.698  ; 9.613  ; 9.774  ; 9.658  ;
+; rle_addr[2]      ; port_A_addr[2]  ; 9.698  ; 9.522  ; 9.740  ; 9.563  ;
+; rle_addr[2]      ; port_A_addr[3]  ; 9.752  ; 9.755  ; 9.806  ; 9.778  ;
+; rle_addr[2]      ; port_A_addr[4]  ; 10.124 ; 9.969  ; 10.140 ; 9.993  ;
+; rle_addr[2]      ; port_A_addr[5]  ; 9.085  ; 9.019  ; 9.139  ; 9.042  ;
+; rle_addr[2]      ; port_A_addr[6]  ; 9.856  ; 9.744  ; 9.872  ; 9.768  ;
+; rle_addr[2]      ; port_A_addr[7]  ; 9.421  ; 9.433  ; 9.475  ; 9.456  ;
+; rle_addr[2]      ; port_A_addr[8]  ; 9.550  ; 9.435  ; 9.566  ; 9.459  ;
+; rle_addr[2]      ; port_A_addr[9]  ; 9.755  ; 9.597  ; 9.809  ; 9.620  ;
+; rle_addr[2]      ; port_A_addr[10] ; 9.856  ; 9.727  ; 9.872  ; 9.751  ;
+; rle_addr[2]      ; port_A_addr[11] ; 9.858  ; 9.740  ; 9.920  ; 9.771  ;
+; rle_addr[2]      ; port_A_addr[12] ; 9.919  ; 9.814  ; 9.943  ; 9.846  ;
+; rle_addr[2]      ; port_A_addr[13] ; 9.934  ; 9.823  ; 9.996  ; 9.854  ;
+; rle_addr[2]      ; port_A_addr[14] ; 8.965  ; 8.958  ; 8.989  ; 8.990  ;
+; rle_addr[2]      ; port_A_addr[15] ; 9.977  ; 9.892  ; 10.039 ; 9.923  ;
+; rle_addr[3]      ; port_A_addr[3]  ; 9.577  ; 9.552  ; 9.601  ; 9.575  ;
+; rle_addr[3]      ; port_A_addr[4]  ; 10.178 ; 10.023 ; 10.182 ; 10.035 ;
+; rle_addr[3]      ; port_A_addr[5]  ; 9.139  ; 9.073  ; 9.181  ; 9.084  ;
+; rle_addr[3]      ; port_A_addr[6]  ; 9.910  ; 9.798  ; 9.914  ; 9.810  ;
+; rle_addr[3]      ; port_A_addr[7]  ; 9.475  ; 9.487  ; 9.517  ; 9.498  ;
+; rle_addr[3]      ; port_A_addr[8]  ; 9.604  ; 9.489  ; 9.608  ; 9.501  ;
+; rle_addr[3]      ; port_A_addr[9]  ; 9.809  ; 9.651  ; 9.851  ; 9.662  ;
+; rle_addr[3]      ; port_A_addr[10] ; 9.910  ; 9.781  ; 9.914  ; 9.793  ;
+; rle_addr[3]      ; port_A_addr[11] ; 9.912  ; 9.794  ; 9.962  ; 9.813  ;
+; rle_addr[3]      ; port_A_addr[12] ; 9.973  ; 9.868  ; 9.985  ; 9.888  ;
+; rle_addr[3]      ; port_A_addr[13] ; 9.988  ; 9.877  ; 10.038 ; 9.896  ;
+; rle_addr[3]      ; port_A_addr[14] ; 9.019  ; 9.012  ; 9.031  ; 9.032  ;
+; rle_addr[3]      ; port_A_addr[15] ; 10.031 ; 9.946  ; 10.081 ; 9.965  ;
+; rle_addr[4]      ; port_A_addr[4]  ; 10.006 ; 9.830  ; 10.013 ; 9.836  ;
+; rle_addr[4]      ; port_A_addr[5]  ; 9.235  ; 9.169  ; 9.260  ; 9.163  ;
+; rle_addr[4]      ; port_A_addr[6]  ; 10.006 ; 9.894  ; 9.993  ; 9.889  ;
+; rle_addr[4]      ; port_A_addr[7]  ; 9.571  ; 9.583  ; 9.596  ; 9.577  ;
+; rle_addr[4]      ; port_A_addr[8]  ; 9.700  ; 9.585  ; 9.687  ; 9.580  ;
+; rle_addr[4]      ; port_A_addr[9]  ; 9.905  ; 9.747  ; 9.930  ; 9.741  ;
+; rle_addr[4]      ; port_A_addr[10] ; 10.006 ; 9.877  ; 9.993  ; 9.872  ;
+; rle_addr[4]      ; port_A_addr[11] ; 10.008 ; 9.890  ; 10.041 ; 9.892  ;
+; rle_addr[4]      ; port_A_addr[12] ; 10.069 ; 9.964  ; 10.064 ; 9.967  ;
+; rle_addr[4]      ; port_A_addr[13] ; 10.084 ; 9.973  ; 10.117 ; 9.975  ;
+; rle_addr[4]      ; port_A_addr[14] ; 9.115  ; 9.108  ; 9.110  ; 9.111  ;
+; rle_addr[4]      ; port_A_addr[15] ; 10.127 ; 10.042 ; 10.160 ; 10.044 ;
+; rle_addr[5]      ; port_A_addr[5]  ; 8.738  ; 8.644  ; 8.810  ; 8.718  ;
+; rle_addr[5]      ; port_A_addr[6]  ; 9.609  ; 9.497  ; 9.651  ; 9.547  ;
+; rle_addr[5]      ; port_A_addr[7]  ; 9.174  ; 9.186  ; 9.254  ; 9.235  ;
+; rle_addr[5]      ; port_A_addr[8]  ; 9.303  ; 9.188  ; 9.345  ; 9.238  ;
+; rle_addr[5]      ; port_A_addr[9]  ; 9.508  ; 9.350  ; 9.588  ; 9.399  ;
+; rle_addr[5]      ; port_A_addr[10] ; 9.609  ; 9.480  ; 9.651  ; 9.530  ;
+; rle_addr[5]      ; port_A_addr[11] ; 9.611  ; 9.493  ; 9.699  ; 9.550  ;
+; rle_addr[5]      ; port_A_addr[12] ; 9.672  ; 9.567  ; 9.722  ; 9.625  ;
+; rle_addr[5]      ; port_A_addr[13] ; 9.687  ; 9.576  ; 9.775  ; 9.633  ;
+; rle_addr[5]      ; port_A_addr[14] ; 8.718  ; 8.711  ; 8.768  ; 8.769  ;
+; rle_addr[5]      ; port_A_addr[15] ; 9.730  ; 9.645  ; 9.818  ; 9.702  ;
+; rle_addr[6]      ; port_A_addr[6]  ; 9.140  ; 9.015  ; 9.188  ; 9.076  ;
+; rle_addr[6]      ; port_A_addr[7]  ; 8.880  ; 8.892  ; 8.940  ; 8.921  ;
+; rle_addr[6]      ; port_A_addr[8]  ; 9.009  ; 8.894  ; 9.031  ; 8.924  ;
+; rle_addr[6]      ; port_A_addr[9]  ; 9.214  ; 9.056  ; 9.274  ; 9.085  ;
+; rle_addr[6]      ; port_A_addr[10] ; 9.315  ; 9.186  ; 9.337  ; 9.216  ;
+; rle_addr[6]      ; port_A_addr[11] ; 9.317  ; 9.199  ; 9.385  ; 9.236  ;
+; rle_addr[6]      ; port_A_addr[12] ; 9.378  ; 9.273  ; 9.408  ; 9.311  ;
+; rle_addr[6]      ; port_A_addr[13] ; 9.393  ; 9.282  ; 9.461  ; 9.319  ;
+; rle_addr[6]      ; port_A_addr[14] ; 8.424  ; 8.417  ; 8.454  ; 8.455  ;
+; rle_addr[6]      ; port_A_addr[15] ; 9.436  ; 9.351  ; 9.504  ; 9.388  ;
+; rle_addr[7]      ; port_A_addr[7]  ; 9.813  ; 9.797  ; 9.766  ; 9.749  ;
+; rle_addr[7]      ; port_A_addr[8]  ; 10.178 ; 10.063 ; 10.105 ; 9.998  ;
+; rle_addr[7]      ; port_A_addr[9]  ; 10.383 ; 10.225 ; 10.348 ; 10.159 ;
+; rle_addr[7]      ; port_A_addr[10] ; 10.484 ; 10.355 ; 10.411 ; 10.290 ;
+; rle_addr[7]      ; port_A_addr[11] ; 10.486 ; 10.368 ; 10.459 ; 10.310 ;
+; rle_addr[7]      ; port_A_addr[12] ; 10.547 ; 10.442 ; 10.482 ; 10.385 ;
+; rle_addr[7]      ; port_A_addr[13] ; 10.562 ; 10.451 ; 10.535 ; 10.393 ;
+; rle_addr[7]      ; port_A_addr[14] ; 9.593  ; 9.586  ; 9.528  ; 9.529  ;
+; rle_addr[7]      ; port_A_addr[15] ; 10.605 ; 10.520 ; 10.578 ; 10.462 ;
+; rle_addr[8]      ; port_A_addr[8]  ; 9.908  ; 9.772  ; 9.873  ; 9.734  ;
+; rle_addr[8]      ; port_A_addr[9]  ; 10.386 ; 10.228 ; 10.365 ; 10.176 ;
+; rle_addr[8]      ; port_A_addr[10] ; 10.487 ; 10.358 ; 10.428 ; 10.307 ;
+; rle_addr[8]      ; port_A_addr[11] ; 10.489 ; 10.371 ; 10.476 ; 10.327 ;
+; rle_addr[8]      ; port_A_addr[12] ; 10.550 ; 10.445 ; 10.499 ; 10.402 ;
+; rle_addr[8]      ; port_A_addr[13] ; 10.565 ; 10.454 ; 10.552 ; 10.410 ;
+; rle_addr[8]      ; port_A_addr[14] ; 9.596  ; 9.589  ; 9.545  ; 9.546  ;
+; rle_addr[8]      ; port_A_addr[15] ; 10.608 ; 10.523 ; 10.595 ; 10.479 ;
+; rle_addr[9]      ; port_A_addr[9]  ; 9.270  ; 9.092  ; 9.314  ; 9.149  ;
+; rle_addr[9]      ; port_A_addr[10] ; 9.507  ; 9.378  ; 9.525  ; 9.404  ;
+; rle_addr[9]      ; port_A_addr[11] ; 9.509  ; 9.391  ; 9.573  ; 9.424  ;
+; rle_addr[9]      ; port_A_addr[12] ; 9.570  ; 9.465  ; 9.596  ; 9.499  ;
+; rle_addr[9]      ; port_A_addr[13] ; 9.585  ; 9.474  ; 9.649  ; 9.507  ;
+; rle_addr[9]      ; port_A_addr[14] ; 8.616  ; 8.609  ; 8.642  ; 8.643  ;
+; rle_addr[9]      ; port_A_addr[15] ; 9.628  ; 9.543  ; 9.692  ; 9.576  ;
+; rle_addr[10]     ; port_A_addr[10] ; 9.327  ; 9.177  ; 9.363  ; 9.212  ;
+; rle_addr[10]     ; port_A_addr[11] ; 9.536  ; 9.418  ; 9.589  ; 9.440  ;
+; rle_addr[10]     ; port_A_addr[12] ; 9.597  ; 9.492  ; 9.612  ; 9.515  ;
+; rle_addr[10]     ; port_A_addr[13] ; 9.612  ; 9.501  ; 9.665  ; 9.523  ;
+; rle_addr[10]     ; port_A_addr[14] ; 8.643  ; 8.636  ; 8.658  ; 8.659  ;
+; rle_addr[10]     ; port_A_addr[15] ; 9.655  ; 9.570  ; 9.708  ; 9.592  ;
+; rle_addr[11]     ; port_A_addr[11] ; 9.357  ; 9.211  ; 9.395  ; 9.248  ;
+; rle_addr[11]     ; port_A_addr[12] ; 9.654  ; 9.549  ; 9.666  ; 9.569  ;
+; rle_addr[11]     ; port_A_addr[13] ; 9.669  ; 9.558  ; 9.719  ; 9.577  ;
+; rle_addr[11]     ; port_A_addr[14] ; 8.700  ; 8.693  ; 8.712  ; 8.713  ;
+; rle_addr[11]     ; port_A_addr[15] ; 9.712  ; 9.627  ; 9.762  ; 9.646  ;
+; rle_addr[12]     ; port_A_addr[12] ; 9.440  ; 9.314  ; 9.455  ; 9.328  ;
+; rle_addr[12]     ; port_A_addr[13] ; 9.723  ; 9.612  ; 9.756  ; 9.614  ;
+; rle_addr[12]     ; port_A_addr[14] ; 8.754  ; 8.747  ; 8.749  ; 8.750  ;
+; rle_addr[12]     ; port_A_addr[15] ; 9.766  ; 9.681  ; 9.799  ; 9.683  ;
+; rle_addr[13]     ; port_A_addr[13] ; 9.420  ; 9.281  ; 9.489  ; 9.352  ;
+; rle_addr[13]     ; port_A_addr[14] ; 8.551  ; 8.544  ; 8.590  ; 8.591  ;
+; rle_addr[13]     ; port_A_addr[15] ; 9.563  ; 9.478  ; 9.640  ; 9.524  ;
+; rle_addr[14]     ; port_A_addr[14] ; 8.413  ; 8.393  ; 8.442  ; 8.435  ;
+; rle_addr[14]     ; port_A_addr[15] ; 9.600  ; 9.515  ; 9.641  ; 9.525  ;
+; rle_addr[15]     ; port_A_addr[15] ; 10.004 ; 9.899  ; 9.967  ; 9.875  ;
+; start            ; port_A_addr[0]  ; 9.272  ; 9.270  ; 9.477  ; 9.436  ;
+; start            ; port_A_addr[1]  ; 9.247  ; 9.263  ; 9.451  ; 9.428  ;
+; start            ; port_A_addr[2]  ; 9.237  ; 9.252  ; 9.441  ; 9.417  ;
+; start            ; port_A_addr[3]  ; 9.426  ; 9.528  ; 9.597  ; 9.683  ;
+; start            ; port_A_addr[4]  ; 9.895  ; 9.793  ; 9.991  ; 9.937  ;
+; start            ; port_A_addr[5]  ; 8.874  ; 8.853  ; 8.978  ; 9.005  ;
+; start            ; port_A_addr[6]  ; 9.529  ; 9.527  ; 9.725  ; 9.706  ;
+; start            ; port_A_addr[7]  ; 9.188  ; 9.243  ; 9.283  ; 9.386  ;
+; start            ; port_A_addr[8]  ; 9.272  ; 9.195  ; 9.375  ; 9.346  ;
+; start            ; port_A_addr[9]  ; 9.335  ; 9.349  ; 9.540  ; 9.515  ;
+; start            ; port_A_addr[10] ; 9.161  ; 9.183  ; 9.366  ; 9.349  ;
+; start            ; port_A_addr[11] ; 9.894  ; 9.852  ; 9.916  ; 9.899  ;
+; start            ; port_A_addr[12] ; 9.675  ; 9.640  ; 9.713  ; 9.680  ;
+; start            ; port_A_addr[13] ; 9.855  ; 9.821  ; 9.878  ; 9.869  ;
+; start            ; port_A_addr[14] ; 9.090  ; 9.156  ; 9.121  ; 9.201  ;
+; start            ; port_A_addr[15] ; 9.527  ; 9.523  ; 9.564  ; 9.562  ;
+; start            ; port_A_we       ;        ; 7.719  ; 7.781  ;        ;
++------------------+-----------------+--------+--------+--------+--------+
+
+
+----------------------------------------------
+; Slow 900mV -40C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+

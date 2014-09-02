@@ -1,0 +1,145 @@
+run
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# -----------
+# 
+# Plaintext 1
+# 
+# -----------
+# 
+# 00000000
+# 
+# 00000000
+# 
+# 00000000
+# 
+# 00000000
+# 
+# 00000000
+# 
+# 00000000
+# 
+# 00000000
+# 
+# 00000000
+# 
+# 00000000
+# 
+# 00000000
+# 
+# 00000028
+# 
+# 864d7f00
+# 
+# 1st latency          19!
+# 
+# -----------
+# 
+# Correct rle_size:         12
+# 
+# -----------
+# 
+# Compressed text 1
+# 
+# -----------
+# 
+# 28010028
+# 
+# 7f010004
+# 
+# 86014d01
+# 
+# -----------
+# 
+# Plaintext 2
+# 
+# -----------
+# 
+# 00000000
+# 
+# 12345678
+# 
+# 9abcdef0
+# 
+# 00000000
+# 
+# 00000000
+# 
+# 0f005030
+# 
+# 00000028
+# 
+# 864d7f00
+# 
+# 82367002
+# 
+# 04564530
+# 
+# 45645722
+# 
+# ab56c352
+# 
+# 00555322
+# 
+# Note, most significant byte (00) of last word should not be encrypted
+# 
+# -----------
+# 
+# Correct rle_size:         76
+# 
+# -----------
+# 
+# Compressed text 2
+# 
+# -----------
+# 
+# 78010004
+# 
+# 34015601
+# 
+# f0011201
+# 
+# bc01de01
+# 
+# 00089a01
+# 
+# 50013001
+# 
+# 0f010001
+# 
+# 00042801
+# 
+# 4d017f01
+# 
+# 02018601
+# 
+# 36017001
+# 
+# 30018201
+# 
+# 56014501
+# 
+# 22010401
+# 
+# 64015701
+# 
+# 52014501
+# 
+# 5601c301
+# 
+# 2201ab01
+# 
+# 55015301
+# 
+# 2st latency          36!
+# 
+# --Total Latency:          55
+# Break in Module rle_testbench at C:/Users/Richard/Google Drive/ECE111_Proj2 - Copy - Copy - Copy/rle_testbench.v line 174

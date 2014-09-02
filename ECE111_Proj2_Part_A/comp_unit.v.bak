@@ -1,0 +1,21 @@
+module comp_unit (input reg din[31:0], input clk, input l_run_val_i [7:0], input l_run_len_i [7:0],
+output reg dout[31:0], output reg dout_sz [7:0], output reg l_run_dout[31:0], output l_run_flush,
+output en_next_unit, output reg l_run_val_o[7:0], output reg l_run_len_o[7:0]);
+
+reg run_len[7:0];
+reg last_run_len[7:0];
+reg last_run_val[7:0];
+always @ (*)
+begin
+	case({din[31:24]==din[23:16],din[31:24]==din[15:8],din[31:24]==din[7:0]})
+		3'b111: begin 
+					run_len = 4;
+					last_run_val = din[31:24];	
+				  end
+		3'b110: run_len = 3;
+		3'b100: run_len = 2;
+		default: run_len 1;
+	begin
+	
+	end
+end 

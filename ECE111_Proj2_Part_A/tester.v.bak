@@ -1,0 +1,35 @@
+module tester ();
+reg	clk;
+reg	reset;
+reg	writing;
+reg	[31:0] datain;
+wire	CU1_lrunwo;
+wire	CU1_haslast;
+wire	CU2_haslast;
+wire	CU3_haslast;
+wire	CU4_haslast;
+wire	[15:0] CU1_curr;
+wire	[15:0] CU1_lrun;
+wire	[15:0] CU2_curr;
+wire	[15:0] CU3_curr;
+wire	[15:0] CU4_curr;
+
+always begin
+#5 clk = ~clk; // Toggle clock every 5 ticks
+// this makes the clock cycle 10 ticks
+end
+
+block blkv(.clk(clk),
+	.reset(reset),
+	.writing(writing),
+	.datain(datain),
+	.CU1_lrunwo(CU1_lrunwo),
+	.CU1_haslast(CU1_haslast),
+	.CU2_haslast(CU2_haslast),
+	.CU3_haslast(CU3_haslast),
+	.CU4_haslast(CU4_haslast),
+	.CU1_curr(CU1_curr),
+	.CU1_lrun(CU1_lrun),
+	.CU2_curr(CU2_curr),
+	.CU3_curr(CU3_curr),
+	.CU4_curr(CU4_curr));
