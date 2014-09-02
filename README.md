@@ -1,4 +1,4 @@
-ECE-111-Spring-2014-Winning-RLE-Compression-in-Verilog
+ECE 111 Spring 2014 Winning RLE Compression in Verilog
 ======================================================
 
 Winning RLE Compression Design in Verilog UCSD ECE 111 Spring 2014
