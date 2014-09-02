@@ -7,7 +7,7 @@ Winning RLE Compression Design in Verilog UCSD ECE 111 Spring 2014
 
 1. Richard Bull & Michael Hughes:
 
-#ALUTs = 1019, #Registers = 165, Area = 1184
+ALUTs = 1019, #Registers = 165, Area = 1184
 
 Clock period = 4.19 ns, Clock cycles = 55
 
